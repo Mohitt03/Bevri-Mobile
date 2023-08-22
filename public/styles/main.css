@@ -1,0 +1,322 @@
+html,body{
+    width:100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+}
+body{
+    background-color: white;
+}
+/*Section 1*/
+.navi{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    padding: 2% 0 2% 0;
+    z-index: 9999;
+
+}
+.nav-img{
+    position: relative;
+    width: 30%;
+    height: auto;
+
+}
+
+/*Section 2*/
+.sec2{
+    margin: 0% 0 5% 3% ;
+    padding-top: 23%;
+}
+.sec2-img{
+    position: relative;
+    border-radius: 10px;
+    width:30%;
+    height:auto;
+    margin-bottom:4%;
+}
+.sec2-text{
+    font-size: 25px;
+    font-weight: 400;
+}
+.Support{
+    background-color: rgb(70, 110, 11);
+    border: none;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: lighter;
+    padding: auto;
+    color: white;
+}
+.white{
+    background-color: white;
+}
+/*Section 3*/
+.sec3{
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.sec3-img1{
+    position: relative;
+    width: 60%;
+    height: auto;
+    margin: 5% auto 5% auto;
+}
+.text{
+    color: white;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.head1{
+    font-size: 30px;
+}
+.Text1{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.Text2{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.menu{
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 70px;
+    border-radius: 25px;
+    font-size: 30px;
+    margin: 5% auto 5% auto;
+}
+.menu:hover{
+    background-color: orange;
+    border: none;
+}
+.sec3-img2-div{
+margin: 5% 0 5% 0;
+}
+.sec3-img2{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+/*Section 4*/
+.sec4{
+    width: 70%;
+    text-align: center;
+}
+.sec4-img1 {
+    width: 70%;
+    height: auto;
+}
+.sec4-img2 {
+    width: 70%;
+    height: auto;
+}
+.sec4-img3 {
+    width: 70%;
+    height: auto;
+}
+.sec4-head{
+    font-weight: 500;
+    font-size: 40px;
+    width: 310px;
+    text-align: center;
+}
+.sec4-text{
+text-align: center;
+font-weight: 700;
+font-size: 25px;
+}
+.sec4-btn{
+    background-color: black;
+    border:none ;
+    color: white;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    margin: 5% auto 5% auto;
+}
+.sec4-btn:hover{
+    background-color: orange;
+    border:none ;
+}
+.parallax{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+}
+
+/*Section 5*/
+
+.sec5{
+    margin: 5%;
+}
+.sec5-head{
+    margin-bottom: 9%;
+    font-weight: 700;
+}
+.sec5-text{
+    font-size: 30px;
+    color: grey;
+    font-weight: 200;
+}
+.sec5-btn{
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    margin: 8%;
+ 
+}
+.map{
+    width: 80%;
+    height: 300px;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    
+}
+/*Section 6*/
+.sec6{
+    text-align: center;
+}
+.bg-img{
+    background-image: url('Bevri Images/sec4.jpg');
+    background-size: 100%  408px;
+    display: block;
+    width: 100%;
+    height: 390px;
+    text-align: center;
+
+}
+.sec6-head1{
+    position: relative;
+    font-weight: 700;
+    font-size: 35px;
+    top: 105px;
+    display: flex;
+    justify-content: center;
+}
+.sec6-head2{
+    position: relative;
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
+    top: 115px;
+}
+.Delivery{
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    top: 125px;
+    width: 141px;
+    height: 48px;
+    font-size: 25px;
+    text-align: center;
+}
+.Delivery:hover{
+    background-color: orange;
+    border: none;
+}
+.Pickup{
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    top: 150px;
+    width: 141px;
+    height: 48px;
+    font-size: 25px;
+    text-align: center;
+}
+.Pickup:hover{
+    background-color: orange;
+    border: none;
+}
+
+
+/*Section 7*/
+
+.sec7{
+    background-color: black;
+    color: white;
+}
+.sec7-img1{
+    position: relative;
+    bottom: 70px;
+    left: 65%;
+}
+.sec7-head{
+    padding-left: 7%;
+    font-weight: 400;
+}
+.sec7-text{
+    padding-left: 7%;
+    font-size: 20px;
+}
+.email{
+    width: 85%;
+    height: 45px;
+}
+.sec7-btn{
+    background-color: orange;
+    position: relative;
+    color: white;
+    margin-top: 3%;
+    width: 170px;
+    height: 45px;
+    font-size: 20px;
+}
+.sec7-btn:hover{
+    background-color: red;
+}
+/*Last*/
+
+.last{
+    margin-top: 20%;
+    background-color: black;
+    color: white;
+    overflow-y: hidden;
+}
+.text1{
+    text-align: center;
+}
+.text2{
+    text-align: center;
+}.last-img{
+    position: relative;
+    top: 130px;
+    width: 300px;
+    height: auto;
+}

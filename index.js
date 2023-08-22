@@ -16,6 +16,10 @@ app.get("/", (req, res) => {
   res.render("index.ejs",{value:d});  
 });
 
+app.get("/menu", (req, res) => {
+  res.render("menu.ejs"); 
+});
+
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

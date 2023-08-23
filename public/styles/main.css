@@ -1,55 +1,55 @@
 body{
-  background-color: rgb(21 63 145);
-  font-style: sans-serif;
+    background-color: rgb(21 63 145);
+    font-style: sans-serif;
 }
 
 /* .logo{
-  position: absolute;
-  left: 1px;
-  top: 1px;
+    position: absolute;
+    left: 1px;
+    top: 1px;
 } */
 .flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 640px;
 }
 
 .img1{
-  width: auto;
-  height: 300px;
+    width: auto;
+    height: 300px;
 }
 h1{
-  color: rgb(207 166 204);
-  font-size: 31px;
-  position: relative;
-  left: -49px;
-  top: 69px;
-  font-family: sans-serif;
+    color: rgb(207 166 204);
+    font-size: 31px;
+    position: relative;
+    left: -49px;
+    top: 69px;
+    font-family: sans-serif;
 }
 
 ul{
-  list-style-type: none; /* Remove bullets */
-  display: flex;
-  flex-direction: row;
+    list-style-type: none; /* Remove bullets */
+    display: flex;
+    flex-direction: row;
 }
 
 a{
-  color: rgb(154 176 182);
-  font-weight: 800;
-  font-size: 20px;
-  position: relative;
-  left: -99px;
-  top: 39px;
-  font-family: sans-serif;
-  padding: 1px 20px 1px 20px;
-  margin: 0px 0px 0px 0px;
+    color: rgb(154 176 182);
+    font-weight: 800;
+    font-size: 20px;
+    position: relative;
+    left: -99px;
+    top: 39px;
+    font-family: sans-serif;
+    padding: 1px 20px 1px 20px;
+    margin: 0px 0px 0px 0px;
 }
 a:hover{
-  background-color: white;
+    background-color: white;
 }
 .sec2{
-  position: absolute;
-  left: 646px;
-  top: 418px;
+    position: absolute;
+    left: 646px;
+    top: 418px;
 }

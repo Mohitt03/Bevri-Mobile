@@ -5,17 +5,12 @@ const port = 3000;
 
 app.use(express.static("public"))
 
-
-
 var d = "Jagat";
 
 app.get("/", (req, res) => {
-  res.render("index.ejs",{value:d});  
+  res.render("index.ejs");  
 });
 
-app.get("/menu", (req, res) => {
-  res.render("menu.ejs"); 
-});
 
 
 app.listen(port, () => {

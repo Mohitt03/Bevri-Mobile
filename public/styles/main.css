@@ -1,55 +1,402 @@
-body{
-    background-color: rgb(21 63 145);
-    font-style: sans-serif;
-}
-
-/* .logo{
-    position: absolute;
-    left: 1px;
-    top: 1px;
-} */
-.flex-container {
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  /*First Section*/
+  .navbar{
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .btn{
+    background-color: black;
+    color: white;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .one{
+    position: relative;
+    width: 836px;
+    left: 248px;
+  
+  }
+  .two{
+    background-color: black;
+    border: solid 1px white;
+    width: 100px;
+    border-radius: 30px;
+    position: relative;
+    left: 250px;
+  }
+  .two:hover{
+    background-color: #d1820c;
+    border: solid 1px #d1820c;
+  }
+  
+  
+  /*Second Section*/
+  
+  .First-Slide{
+    background-color: black;
+    height: 910px;
+  }
+  .left-img{
+    width: 570px;
+    height: 900px;
+    position: relative;
+    left: 170px;
+  }
+  .Right-img-top{
+    position: relative;
+    left: 200px;
+    bottom: 260px;
+  }
+  .Right-img-bottom{
+    position: relative;
+    transform: rotate(20deg);
+    left: 230px;
+    top: 160px;
+  }
+  .first-heading{
+    position: relative;
+    color: white;
+    text-align: center;
+    width: 470px;
+    left: 780px;
+    bottom: 530px;
+    
+  }
+  .para1{
+    color: white;
+    position: relative;
+    width: 400px;
+    text-align: center;
+    left: 810px;
+    bottom: 470px;
+  }
+  .para2{
+    color: white;
+    position: relative;
+    width: 400px;
+    text-align: center;
+    left: 810px;
+    bottom: 440px;
+  }
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: black; 
+    color: white; 
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 30px;
+    padding: 10px 10px 50px 10px ;
+    width: 150px;
+    height: 60px;
+    position: relative;
+    left: 920px ;
+    bottom: 380px;
+  }
+  
+  .button1:hover {
+    background-color: #d1820c;
+    border: 2px solid #d1820c;
+    color: white;
+  }
+  /*Section-2*/
+  
+  
+  .sec2{
+    background-color: white;
+    height: 700px;
+  }
+  .sec2-heading{
+    position: relative;
+    left: 580px;
+    padding: 50px 0 50px 0;
+  }
+  .images{
+    position: relative;
+    width: 1100px;
+    left: 235px;
+  }
+  .img1{
+    position: relative;
+    width: 317px;
+    height: 320px;
+    margin: 0px 20px 0px 20px;
+  }
+  .img2{
+    position: relative;
+    width: 317px;
+    height: 320px;
+    margin: 0px 20px 0px 20px;
+  }
+  .img3{
+    position: relative;
+    width: 317px;
+    height: 320px;
+    margin: 0px 20px 0px 20px;
+  }
+  .title{
+    position: relative;
+    font-size: 20px;
+    font-weight:700;
+  }
+  .t1{
+    position: relative;
+    left: 400px;
+    top: 30px;
+  }
+  .t2{
+    position: relative;
+    left: 750px;
+    top: -15px;
+  }
+  .t3{
+    position: relative;
+    left: 1080px;
+    top: -65px;
+  }
+  .btn3{
+    position: relative;
+    background-color: black;
+    border: none;
+    color: white;
+    left: 700px;
+    top: -30px;
+    width: 150px;
+    height: 50px;
+  }
+  .btn3:hover{
+    background-color: #d1820c;
+  }
+  
+  
+  .parallax-1{
+    width: 100%;
+    height: 1276px;
+    background-image: url("https://static.wixstatic.com/media/a560a5_ccad95a07b5a45178fc25d2d5245bbff~mv2.jpg/v1/fill/w_1519,h_1276,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a560a5_ccad95a07b5a45178fc25d2d5245bbff~mv2.jpg");
+    background-size: 100% 1276px;
+    background-attachment: fixed;
+    cursor: pointer;
+    position: sticky;
     display: flex;
     justify-content: center;
-    align-items: center;
+  }
+  
+  /*Section 3*/
+  .sec3{
+    height: 1350px;
+  }
+  .sec3-heading{
+    position: relative;
+    left: 302px;
+    top: 121px;
+    font-weight: 700;
+  }
+  .sec3-title{
+    position: relative;
+    font-size: large;
+    color: grey;
+    width: 400px;
+    left: 302px;
+    top: 165px;
+  }
+  .btn-sec3{
+    position: relative;
+    background-color: black;
+    border: none;
+    color: white;
+    left: 304px;
+    top: -205px;
+    width: 143px;
+    height: 43px;
+  }
+  .btn-sec3:hover{
+    background-color: grey;
+    border: none;
+  }
+  .map{
+    position: relative;
+    left: 644px;
+    top: -164px;
+  }
+  /*lower*/
+  .lower{
+    position: relative;
+    left: 0px;
+    top: 0px;
+  }
+  .sec3-img{
+    position: relative;
+    left: -495px;
+    top: -70px;
+    width: 1260px;
     height: 640px;
-}
-
-.img1{
-    width: auto;
-    height: 300px;
-}
-h1{
-    color: rgb(207 166 204);
-    font-size: 31px;
+  }
+  .sec3-head2{
     position: relative;
-    left: -49px;
-    top: 69px;
-    font-family: sans-serif;
-}
-
-ul{
-    list-style-type: none; /* Remove bullets */
-    display: flex;
-    flex-direction: row;
-}
-
-a{
-    color: rgb(154 176 182);
-    font-weight: 800;
-    font-size: 20px;
+    font-weight: 700;
+    left: 871px;
+    top: -578px;
+  }
+  .sec3-title2{
     position: relative;
-    left: -99px;
-    top: 39px;
-    font-family: sans-serif;
-    padding: 1px 20px 1px 20px;
-    margin: 0px 0px 0px 0px;
-}
-a:hover{
-    background-color: white;
-}
-.sec2{
-    position: absolute;
-    left: 646px;
-    top: 418px;
-}
+    left: 871px;
+    top: -539px;
+    width: 343px;
+    color: grey;
+    font-size: x-large;
+  }
+  .sec3-btn2{
+    position: relative;
+    left: 871px;
+    top: -524px;
+    background-color: black;
+    border:  none;
+    width: 143px;
+    height: 43px;
+    color: white;
+  }
+  .sec3-btn2:hover{
+    background-color: #d1820c;
+    border:  none;
+  }
+  /*parallax 4*/
+  .parallax-2{
+    width: 100%;
+    height: 100%;
+    background-image: url("Bevri Images/sec4.jpg");
+    cursor: pointer;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  .sec4-heading1{
+    position: relative;
+    font-size: 70px;
+    color: black;
+    left: 590px;
+    top: 221px;
+  }
+  .sec4-heading2{
+    position: relative;
+    font-size: 150px;
+    font-weight: 700;
+    color: black;
+    left: 426px;
+    top: 210px;
+  }
+  .sec4-btn1{
+    position: relative;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    left: 462px;
+    top: 259px;
+    width: 215px;
+    height: 70px;
+    font-size: 30px;
+  }
+  .sec4-btn1:hover{
+    background-color: #d1820c;
+    border-color: #d1820c;
+  }
+  .sec4-btn2{
+    position: relative;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    left: 690px;
+    top: 259px;
+    width: 215px;
+    height: 70px;
+    font-size: 30px;
+  
+  }
+  .sec4-btn2:hover{
+    background-color: #d1820c;
+    border-color: #d1820c;
+  }
+  
+  /*Section 5*/
+  
+  .sec5{
+    background-color: black;
+  }
+  
+  .sec5-heading{
+    position: relative;
+    color: white;
+    left: 477px;
+    top: 62px;
+  }
+  
+  .label{
+      position: relative;
+      color: white;
+      left: 477px;
+      top: 59px;
+      font-size: 15px;
+  }
+  
+  .email{
+    position: relative;
+    color: black;
+    left: 477px;
+    top: 54px;
+    width: 646px;
+    height: 50px;
+  }
+  
+  .sec5-btn1{
+    position: relative;
+    left: 477px;
+    top: -50px;
+    width: 115px;
+    height: 40px;
+    background-color:#d1820c;
+    border:  none;
+  
+    color: white;
+  }
+  
+  .sec5-btn1:hover{
+    background-color: #ff5900;
+    border:  none;
+  }
+  .img{
+    position: relative;
+    width:254px;
+    height:291px;
+    left: 1120px;
+    top: -15px;
+  }
+  .Warning{
+    position: relative;
+    color: white;
+    left: 0px;
+    top: 0px;
+    font-size: 10px;
+  }
+  

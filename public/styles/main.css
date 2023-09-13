@@ -5,11 +5,26 @@ html,body{
     padding: 0px;
     overflow-x: hidden;
   }
-  /*First Section*/
-  .navbar{
+  .container{
+    max-width:100% ;
+    height: auto;
+  }
+  /*Nav Bar*/
+  .head{
+    display:flex ;
+    justify-content: center;
     background-color: black;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 10px 0px 10px 0px;
+  }
+  .head-img{
+    margin: 0px 10px 0px 0px ;
+  }
+  .navbar{
+    display:flex ;
+    justify-content: center;
+    background-color: black;
+ 
+
   }
   
   .btn{
@@ -21,8 +36,6 @@ html,body{
   }
   .one{
     position: relative;
-    width: 836px;
-    left: 248px;
   
   }
   .two{
@@ -37,164 +50,95 @@ html,body{
     background-color: #d1820c;
     border: solid 1px #d1820c;
   }
-  
-  
-  /*Second Section*/
-  
-  .First-Slide{
-    background-color: black;
-    height: 910px;
-  }
-  .left-img{
-    width: 570px;
-    height: 900px;
-    position: relative;
-    left: 170px;
-  }
-  .Right-img-top{
-    position: relative;
-    left: 200px;
-    bottom: 260px;
-  }
-  .Right-img-bottom{
-    position: relative;
-    transform: rotate(20deg);
-    left: 230px;
-    top: 160px;
-  }
-  .first-heading{
-    position: relative;
-    color: white;
-    text-align: center;
-    width: 470px;
-    left: 780px;
-    bottom: 530px;
-    
-  }
-  .para1{
-    color: white;
-    position: relative;
-    width: 400px;
-    text-align: center;
-    left: 810px;
-    bottom: 470px;
-  }
-  .para2{
-    color: white;
-    position: relative;
-    width: 400px;
-    text-align: center;
-    left: 810px;
-    bottom: 440px;
-  }
-  .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
+
+  .nav-link{
+    margin: 0px 5px 0px 5px ;
   }
   
-  .button1 {
-    background-color: black; 
-    color: white; 
-    border: 2px solid white;
-    border-radius: 20px;
-    font-size: 30px;
-    padding: 10px 10px 50px 10px ;
-    width: 150px;
-    height: 60px;
-    position: relative;
-    left: 920px ;
-    bottom: 380px;
-  }
   
-  .button1:hover {
-    background-color: #d1820c;
-    border: 2px solid #d1820c;
-    color: white;
-  }
+  /*First Section*/  
+.sec1{
+  height: 1000px;
+  background-color: black;
+}
+.sec1-div1{
+  min-width: 980px;
+  background-color: #d1820c;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sec1-div2{
+  display: flex;
+  justify-content: end;
+  --height: 855px;
+  --width: 570px;
+  background-color: black;
+  padding: 0px 0px 0px 0px;
+}
+.sec1-div3{
+  height: 200px;
+  background-color: white;
+}
+.left-img{
+  height: 656px;
+  width: 440px; 
+}
   /*Section-2*/
   
-  
   .sec2{
-    background-color: white;
-    height: 700px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
   }
   .sec2-heading{
     position: relative;
-    left: 580px;
-    padding: 50px 0 50px 0;
+    text-align: center;
+    margin: 50px 0 50px 0;
   }
-  .images{
-    position: relative;
-    width: 1100px;
-    left: 235px;
+
+  .wrap1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    margin: 20px 0px 20px 0px;
   }
-  .img1{
-    position: relative;
-    width: 317px;
-    height: 320px;
-    margin: 0px 20px 0px 20px;
-  }
-  .img2{
-    position: relative;
-    width: 317px;
-    height: 320px;
-    margin: 0px 20px 0px 20px;
-  }
-  .img3{
-    position: relative;
-    width: 317px;
-    height: 320px;
-    margin: 0px 20px 0px 20px;
-  }
-  .title{
-    position: relative;
+  .sec2-text{
+
     font-size: 20px;
     font-weight:700;
+    text-align: center;
   }
-  .t1{
-    position: relative;
-    left: 400px;
-    top: 30px;
+  .sec2-img{
+    max-width: 300px;
+    height: auto;
+    margin: 0px 15px 0px 15px;
   }
-  .t2{
-    position: relative;
-    left: 750px;
-    top: -15px;
-  }
-  .t3{
-    position: relative;
-    left: 1080px;
-    top: -65px;
+  .sec2-btn{
+    display: flex;
+    justify-content: center;
   }
   .btn3{
     position: relative;
     background-color: black;
     border: none;
     color: white;
-    left: 700px;
-    top: -30px;
     width: 150px;
     height: 50px;
+    margin: 20px 0px 40px 0px;
   }
   .btn3:hover{
     background-color: #d1820c;
   }
+  /* Section 3 */
   
   
   .parallax-1{
     width: 100%;
-    height: 1276px;
+    height: 700px;
     background-image: url("https://static.wixstatic.com/media/a560a5_ccad95a07b5a45178fc25d2d5245bbff~mv2.jpg/v1/fill/w_1519,h_1276,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a560a5_ccad95a07b5a45178fc25d2d5245bbff~mv2.jpg");
-    background-size: 100% 1276px;
+    background-size: 100% auto;
     background-attachment: fixed;
     cursor: pointer;
     position: sticky;
@@ -282,13 +226,15 @@ html,body{
   }
   /*parallax 4*/
   .parallax-2{
+    background-color: transparent;
     width: 100%;
-    height: 100%;
-    background-image: url("Bevri Images/sec4.jpg");
+    height: 700px;
+    background-image: url("images/sec4.jpg");
     cursor: pointer;
     background-size: 100% 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
+
   }
   .sec4-heading1{
     position: relative;
@@ -399,4 +345,31 @@ html,body{
     top: 0px;
     font-size: 10px;
   }
+/* 
+Enrty ====> screen
+1199  ====> 992
+991 ====> 768
+767 ====> 576
+575 ====> 320 */
+
+@media (max-width:1199px) {
   
+}
+
+@media (max-width:991px) {
+  .navbar{
+    width: 90%;
+  }
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:565px) {
+  .sec2-img{
+    max-width: 200px;
+    height: auto;
+  }
+}

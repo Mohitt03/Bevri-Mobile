@@ -9,7 +9,14 @@ html,body{
     max-width:100% ;
     height: auto;
   }
+
+
+
   /*Nav Bar*/
+  
+
+
+
   .head{
     display:flex ;
     justify-content: center;
@@ -23,10 +30,7 @@ html,body{
     display:flex ;
     justify-content: center;
     background-color: black;
- 
-
   }
-  
   .btn{
     background-color: black;
     color: white;
@@ -36,7 +40,6 @@ html,body{
   }
   .one{
     position: relative;
-  
   }
   .two{
     background-color: black;
@@ -50,13 +53,16 @@ html,body{
     background-color: #d1820c;
     border: solid 1px #d1820c;
   }
-
   .nav-link{
     margin: 0px 5px 0px 5px ;
   }
-  
-  
-  /*First Section*/  
+
+
+
+ /*First Section*/  
+
+
+ 
 .sec1{
   height: 677px;
   display: flex;
@@ -129,8 +135,14 @@ text-align: center;
   border: none;
   background-color: #d1820c;
 }
+
+
+
   /*Section-2*/
   
+
+
+
   .sec2{
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
@@ -178,9 +190,13 @@ text-align: center;
     background-color: #d1820c;
   }
 
+
+
   /* Section 3 */
   
   
+
+
   .parallax-1{
     width: 100%;
     height: 700px;
@@ -193,74 +209,55 @@ text-align: center;
     justify-content: center;
   }
   
-  /*Section 3*/
+
+
+  /*Section 3 Part 1*/
+
+
+
   .sec3{
     height: 1350px;
   }
+  sec3-
   .sec3-heading{
-    position: relative;
-    left: 302px;
-    top: 121px;
     font-weight: 700;
   }
   .sec3-title{
-    position: relative;
     font-size: large;
     color: grey;
     width: 400px;
-    left: 302px;
-    top: 165px;
   }
-  .btn-sec3{
-    position: relative;
+  .sec3-btn{
     background-color: black;
     border: none;
     color: white;
-    left: 304px;
-    top: -205px;
     width: 143px;
     height: 43px;
   }
-  .btn-sec3:hover{
+  .sec3-btn:hover{
     background-color: grey;
     border: none;
   }
   .map{
-    position: relative;
-    left: 644px;
-    top: -164px;
+
   }
   /*lower*/
   .lower{
-    position: relative;
-    left: 0px;
-    top: 0px;
+
   }
   .sec3-img{
-    position: relative;
-    left: -495px;
-    top: -70px;
     width: 1260px;
     height: 640px;
   }
   .sec3-head2{
-    position: relative;
     font-weight: 700;
-    left: 871px;
-    top: -578px;
   }
   .sec3-title2{
-    position: relative;
-    left: 871px;
-    top: -539px;
     width: 343px;
     color: grey;
     font-size: x-large;
   }
   .sec3-btn2{
-    position: relative;
-    left: 871px;
-    top: -524px;
     background-color: black;
     border:  none;
     width: 143px;
@@ -281,31 +278,21 @@ text-align: center;
     background-size: 100% 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
   }
   .sec4-heading1{
-    position: relative;
     font-size: 70px;
     color: black;
-    left: 590px;
-    top: 221px;
   }
   .sec4-heading2{
-    position: relative;
     font-size: 150px;
     font-weight: 700;
     color: black;
-    left: 426px;
-    top: 210px;
   }
   .sec4-btn1{
-    position: relative;
     background-color: transparent;
     border-radius: 20px;
     border: 1px solid white;
     color: white;
-    left: 462px;
-    top: 259px;
     width: 215px;
     height: 70px;
     font-size: 30px;
@@ -315,13 +302,10 @@ text-align: center;
     border-color: #d1820c;
   }
   .sec4-btn2{
-    position: relative;
     background-color: transparent;
     border-radius: 20px;
     border: 1px solid white;
     color: white;
-    left: 690px;
-    top: 259px;
     width: 215px;
     height: 70px;
     font-size: 30px;
@@ -332,45 +316,36 @@ text-align: center;
     border-color: #d1820c;
   }
   
+
+
   /*Section 5*/
+
+
   
   .sec5{
     background-color: black;
   }
   
   .sec5-heading{
-    position: relative;
     color: white;
-    left: 477px;
-    top: 62px;
   }
   
   .label{
-      position: relative;
       color: white;
-      left: 477px;
-      top: 59px;
       font-size: 15px;
   }
   
   .email{
-    position: relative;
     color: black;
-    left: 477px;
-    top: 54px;
     width: 646px;
     height: 50px;
   }
   
   .sec5-btn1{
-    position: relative;
-    left: 477px;
-    top: -50px;
     width: 115px;
     height: 40px;
     background-color:#d1820c;
     border:  none;
-  
     color: white;
   }
   
@@ -379,17 +354,11 @@ text-align: center;
     border:  none;
   }
   .img{
-    position: relative;
     width:254px;
     height:291px;
-    left: 1120px;
-    top: -15px;
   }
   .Warning{
-    position: relative;
     color: white;
-    left: 0px;
-    top: 0px;
     font-size: 10px;
   }
 /* 

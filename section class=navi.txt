@@ -1,0 +1,60 @@
+
+    <!--Section 1-->
+    <section class="First-Slide sec1  ">
+        <div class=" sec1-div1">
+            <div class="sec1-div2">
+                <img class="left-img" src="images\bevri_website_gift_card (1).jpg">
+            </div>
+            <div class="sec1-div3">
+                <img class="right-img" src="images\Bevri logo.png">
+                <h3 class="right-h1">
+                    Georgian Food and Wine Experience<br>
+                    in San Francisco Bay Area
+                </h3>
+                <div class="right-p">
+                    <p>
+                        Bevri (which means “a lot” in Georgian) is a Georgian restaurant, famous for its hot gooey
+                        cheese
+                        bread khachapuri, juicy and flavorful dumplings khinkali, mouth-watering grilled meats and, of
+                        course, unique luscious Georgian wines.
+                    </p>
+                    <p>
+                        Ready to try our satisfying Georgian food and gorgeous wine? Find us in Downtown Palo Alto or
+                        Los
+                        Altos (reservations recommended) or order delivery.
+                    </p>
+                </div>
+                <button class="right-button">Menu</button>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--Section 2-->
+    <section>
+        <div class="sec2">
+            <h2 class="sec2-heading">Discover Georgian Cuisine</h2>
+            <div class="wrap1 ">
+                <div class="">
+                    <img class="sec2-img" src="images\bevri_website_gift_card2.jpg">
+                    <p class="sec2-text">Menu</p>
+                </div>
+                <div class="">
+                    <img class="sec2-img" src="images\bevri_website_lunch_and_dinner.jpg">
+                    <p class="sec2-text">Store</p>
+                </div>
+                <div class="">
+                    <img class="sec2-img" src="images\bevri_website_gift_card (1).jpg">
+                    <p class="sec2-text">Catering</p>
+                </div>
+            </div>
+            <div class="sec2-btn">
+                <button class="btn3">Book a Table</button>
+            </div>
+        </div>
+    </section>
+    <!--Parallax Section-->
+    <section class="parallax-1 ">
+        <div class="container"></div>
+    </section>

@@ -58,14 +58,17 @@ html,body{
   
   /*First Section*/  
 .sec1{
-  height: 1000px;
+  height: 677px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
   background-color: black;
 }
 .sec1-div1{
-  min-width: 980px;
-  background-color: #d1820c;
+  width: 980px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+
 }
 .sec1-div2{
   display: flex;
@@ -75,13 +78,56 @@ html,body{
   background-color: black;
   padding: 0px 0px 0px 0px;
 }
-.sec1-div3{
-  height: 200px;
-  background-color: white;
-}
+
 .left-img{
-  height: 656px;
-  width: 440px; 
+  width: 440px;
+  height: 670px; 
+}
+.sec1-div3{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: 680px;
+  --width: 570px;
+  background-color: black;
+  padding: 0px 0px 0px 0px;
+}
+.right-img {
+  display: flex;
+  justify-content: center;
+  max-width: 40%;
+  height: auto;
+  margin: 50px 0px 0px 0px;
+}
+.right-h1{
+text-align: center;
+  color: aliceblue;
+  font-weight: 600;
+  margin: 30px 0px 0px 20px;
+}
+.right-p{
+  text-align: center;
+  width: 400px;
+  color: aliceblue;
+  margin: 30px 0px 0px 20px;
+}
+.right-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  width: 130px;
+  height: 50px;
+  margin: 20px 0px 40px 0px;
+  border-radius: 15px;
+  border: 1px solid white;
+  font-size: 30px;
+}
+.right-button:hover{
+  border: none;
+  background-color: #d1820c;
 }
   /*Section-2*/
   
@@ -118,19 +164,20 @@ html,body{
   .sec2-btn{
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin: 20px 0px 40px 0px;
   }
   .btn3{
-    position: relative;
     background-color: black;
-    border: none;
     color: white;
-    width: 150px;
+    width: 130px;
     height: 50px;
-    margin: 20px 0px 40px 0px;
+    border: 1px solid white;
   }
   .btn3:hover{
     background-color: #d1820c;
   }
+
   /* Section 3 */
   
   
@@ -360,6 +407,30 @@ Enrty ====> screen
   .navbar{
     width: 90%;
   }
+  .sec1-div3{
+    position: relative;
+    top: -678px;
+    opacity: 70%;
+  }
+  .sec1-div2{
+    display: flex;
+    justify-content: center;
+  }
+  .sec1-div1{
+    display: block;
+  }
+  .right-img{
+    width: 50%;
+  }
+  .right-h1{
+    margin-left:  0px; ;
+  }
+  .right-p{
+    margin-left:  0px; ;
+  }
+  .parallax-1{
+    background-size: 900px auto;
+  }
 
 }
 
@@ -368,8 +439,11 @@ Enrty ====> screen
 }
 
 @media (max-width:565px) {
-  .sec2-img{
-    max-width: 200px;
-    height: auto;
-  }
+  .right-h1{
+    width: 270px;
+  
+    }
+    .right-p{
+      width: 300px;
+    }
 }

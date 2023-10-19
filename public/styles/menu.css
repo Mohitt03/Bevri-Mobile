@@ -67,3 +67,23 @@
     width: 20px;
     height: auto;
 }
+
+
+
+
+/* Section 2 */
+
+.sec2{}
+.sec2-div1{
+    display: flex;
+}
+.sec2-div-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.sec2-div-img {
+    width: 50%;
+}

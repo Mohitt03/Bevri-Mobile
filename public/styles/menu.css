@@ -3,7 +3,7 @@
 
 .head {
     display: flex;
-    height: 15%;
+    height: 105px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -76,6 +76,10 @@
 .sec2{}
 .sec2-div1{
     display: flex;
+    justify-content: center;
+    background-color: black;
+    height: 532px;
+    align-items: center;
 }
 .sec2-div-text{
     display: flex;
@@ -83,7 +87,33 @@
     justify-content: center;
     align-items: center;
     width: 50%;
+    text-align: center;
+    padding-left: 255px;
+}
+.sec2-t1{
+    font-size: 20px;
+    color: white;    
+    margin-bottom: 0rem;
+}
+.sec2-t2{
+    font-size: 60px;
+    color: white;
+}
+.sec2-btn {
+    margin-top: 17px;
+    background-color: #6f9730;
+    color: white;
+    width: 95px;
+    height: 50px;
+    border-radius: 42px;
+    border: none;
 }
 .sec2-div-img {
     width: 50%;
+    margin-right: 259px;
+}
+.sec2-img{
+    border-radius: 21px;
+    width: 95%;
+    height: 415px;
 }

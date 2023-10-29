@@ -117,3 +117,43 @@
     width: 95%;
     height: 415px;
 }
+
+
+
+/* Section 3 */
+
+
+
+
+/* Section 4 */
+
+
+.sec4{
+    margin-top: 50px;
+}
+.sec4-div1{}
+.sec4-txt{
+    text-align: center;
+}
+.wtxt1{
+    font-size: 72px;
+    font-weight: 354;
+}
+.qtxt2{
+    font-size: 17px;
+}
+.sec4-div2{}
+.line1{}
+.img-sec1{
+    background-color: aliceblue;
+}
+.img1{
+    width: 470px;
+    height: auto;
+    border-radius: 10px;
+}
+.img-sec1:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.line2{}

@@ -11,32 +11,38 @@
     background-color: white;
     padding: 0px 0px;
 }
-.div1{
+
+.div1 {
     width: 100%;
 }
+
 .nav {
     background-color: white;
 }
-.div-img{
+
+.div-img {
     position: relative;
     display: flex;
     width: 30%;
     justify-content: center;
-    left: 87px;  
+    left: 87px;
 }
+
 .head-img {
     width: 128px;
     margin: 0px 10px 0px 0px;
 }
-.main{
+
+.main {
     justify-content: center;
 }
 
-.btn{
+.btn {
     background-color: white;
     color: black;
 }
-.btn:hover{
+
+.btn:hover {
     color: black;
 }
 
@@ -44,14 +50,17 @@
 .div-btn {
     width: 30%;
 }
-.b{
+
+.b {
     margin-right: 5px;
 }
-.btn2{
+
+.btn2 {
     background-color: white;
     color: black;
 }
-.nav-btn1{
+
+.nav-btn1 {
     width: 65px;
     height: 40px;
     color: #6f9730;
@@ -59,11 +68,13 @@
     border-radius: 10px;
     background-color: white;
 }
-.nav-btn2{
+
+.nav-btn2 {
     border: 0px;
     background-color: white;
 }
-.bt{
+
+.bt {
     width: 20px;
     height: auto;
 }
@@ -73,15 +84,17 @@
 
 /* Section 2 */
 
-.sec2{}
-.sec2-div1{
+.sec2 {}
+
+.sec2-div1 {
     display: flex;
     justify-content: center;
     background-color: black;
     height: 532px;
     align-items: center;
 }
-.sec2-div-text{
+
+.sec2-div-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,15 +103,18 @@
     text-align: center;
     padding-left: 255px;
 }
-.sec2-t1{
+
+.sec2-t1 {
     font-size: 20px;
-    color: white;    
+    color: white;
     margin-bottom: 0rem;
 }
-.sec2-t2{
+
+.sec2-t2 {
     font-size: 60px;
     color: white;
 }
+
 .sec2-btn {
     margin-top: 17px;
     background-color: #6f9730;
@@ -108,11 +124,13 @@
     border-radius: 42px;
     border: none;
 }
+
 .sec2-div-img {
     width: 50%;
     margin-right: 259px;
 }
-.sec2-img{
+
+.sec2-img {
     border-radius: 21px;
     width: 95%;
     height: 415px;
@@ -128,55 +146,67 @@
 /* Section 4 */
 
 
-.sec4{
+.sec4 {
     margin-top: 50px;
 }
-.sec4-div1{}
-.sec4-txt{
+
+.sec4-div1 {}
+
+.sec4-txt {
     text-align: center;
 }
-.wtxt1{
+
+.wtxt1 {
     font-size: 72px;
     font-weight: 354;
 }
-.qtxt2{
+
+.qtxt2 {
     font-size: 17px;
 }
-.sec4-div2{}
-.line1{
+
+.sec4-div2 {}
+
+.line1 {
     display: flex;
     /* flex-direction: column; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.outer-span{
+
+.outer-span {
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     margin-right: 5px;
 }
-.outer-span:hover{
+
+.outer-span:hover {
     opacity: 0.8;
     transition: all 0.555s;
 }
-.inner-img{
+
+.inner-img {
     filter: brightness(0.8);
 }
-.inner-span{
+
+.inner-span {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.inner-txt{
+
+.inner-txt {
     margin-bottom: 20px;
     font-weight: 400;
     color: rgb(255, 255, 255);
 }
-.inner-button{
+
+.inner-button {
     background-color: black;
     color: white;
     border-radius: 20px;
@@ -184,12 +214,14 @@
     padding: 10px 12px;
     cursor: pointer;
 }
-.img1{
+
+.img1 {
     width: 490px;
     height: auto;
     border-radius: 10px;
 }
-.line2{
+
+.line2 {
     margin-top: 5px;
     display: flex;
     /* flex-direction: column; */
@@ -197,12 +229,14 @@
     justify-content: center;
     align-items: center;
 }
-.img2{
+
+.img2 {
     width: 374px;
     height: auto;
     border-radius: 10px;
 }
-.img3{
+
+.img3 {
     width: 333px;
     height: auto;
 }
@@ -210,25 +244,28 @@
 
 /* Section 5 */
 
-.sec5{
+.sec5 {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 310px;
     /* background-color: #6f9730; */
 }
-.sec5-div1{
+
+.sec5-div1 {
     display: flex;
     justify-content: center;
     width: 100%;
 }
-.sec5-div{
+
+.sec5-div {
     display: flex;
     width: 36%;
     /* justify-content: center; */
     align-items: center;
 }
-.div2{}
+
+.div2 {}
 
 /* .sec5-div3{
     display: flex;
@@ -241,56 +278,127 @@
     flex-direction: column;
     background-color: white;
 }
-.div-img{
+
+.div-img2 {
     justify-content: left;
-    width: 100%;
+    width: 73%;
     margin-bottom: 23px;
 }
-.head-img {
+
+.head-img2 {
     width: 100px;
 }
 
 
-.li2{
+.li2 {
     margin-right: 10px;
 }
+
 .btn {
     font-size: 15px;
 }
 
-.div3{
+.div3 {
+    position: relative;
     flex-direction: column;
+    justify-content: center;
+    /* align-items: start; */
+    top: 32px;
+
+}
+
+.sec5-inner-div {
     align-items: start;
+
 }
-.qw{
+
+.qw {
     font-weight: 700;
+    margin-bottom: 19px;
 }
-.sec5-input{
+
+.sec5-input {
     border: 1px solid #948b82;
     width: 326px;
     height: 45px;
     border-radius: 10px;
     border-right: none;
+
+    margin-bottom: 19px;
 }
-.sec5-button1{
+
+/* .sec5btn{
+    margin-bottom: 15px;
+} */
+.sec5-button1 {
     position: relative;
-    left: -44px;
+    left: -20px;
     top: -1px;
     background-color: #567525;
     color: #567525;
     border: none;
-    /* border-radius: 20px; */
+    border-radius: 25px;
     height: 45px;
     font-size: 15px;
 }
-.sec5-button2{
+
+.sec5-button2 {
     position: relative;
-    left: -44px;
+    left: -108px;
     top: -1px;
     background-color: #567525;
     color: white;
     border: none;
-    /* border-radius: 20px; */
+    /* border-radius: 24px; */
     height: 45px;
+    transition: all 0.355s;
     font-size: 15px;
+}
+
+.sec5-button2:hover {
+    border-radius: 25px;
+    /* opacity: 0.8; */
+    transition: all 0.355s;
+}
+
+.pqw {
+    font-size: 12px;
+    color: grey;
+    margin-top: 10px;
+}
+
+
+
+/* HR */
+.hr-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: 60%;
+}
+
+
+/* Section 6 */
+
+.sec6{
+    height: 500px;
+}
+.sec6-div1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.sec6-div2{
+    background-color: aqua;
+    height: 100%;
+    width: 50%;
+}
+.sec6-div3{
+    background-color: greenyellow;
+    height: 100%;
+    width: 50%;
 }

@@ -383,22 +383,49 @@ hr {
 
 /* Section 6 */
 
-.sec6{
-    height: 500px;
+.sec6 {
+    margin-top: 30px;
+    height: 120px;
 }
-.sec6-div1{
+
+.sec6-div1 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
 }
-.sec6-div2{
-    background-color: aqua;
+
+.sec6-div2 {
+    display: flex;
+    justify-content: end;
     height: 100%;
-    width: 50%;
+    width: 35%;
+    text-align: center;
 }
-.sec6-div3{
-    background-color: greenyellow;
+.sec6-div2-innerr{
+    position: relative;
+    right: 50px;
+}
+
+.sec6-div3 {
+    display: flex;
+    justify-content: start;
     height: 100%;
-    width: 50%;
+    width: 35%;
+}
+.sec6-div3-innerr{
+    display: flex;
+    position: relative;
+    left: 43px;
+}
+
+.logo {
+    width: 33px;
+    height: 33px;
+    margin-right: 5px;
+}
+.logosvg {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
 }

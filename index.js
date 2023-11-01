@@ -5,8 +5,7 @@ const port = 3000;
 
 app.use(express.static("public"))
 
-
-app.get("/About", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index.ejs");  
 });
 
@@ -18,6 +17,9 @@ app.get("/groups", (req,res)=>{
   res.render("groups.ejs")
 });
 
+app.get("/reservation", (req,res)=>{
+  res.render("Reservation.ejs")
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

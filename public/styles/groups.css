@@ -10,6 +10,7 @@
 
 .sec1 {
     background-color: white;
+    height: auto;
 
 }
 
@@ -22,16 +23,18 @@
 }
 
 .sec1-div2 {
+    height: auto;
     background-color: white;
 }
 
 .div2-head {
     font-size: 48px;
     font-weight: 700;
-    padding-bottom: 13px;
+    padding-bottom: 13px;   
 }
 
 .sec1-div3 {
+    height: auto;
     background-color: white;
     align-items: start;
 }
@@ -43,3 +46,34 @@
 
 
 /* Section 2 */
+
+
+.sec2{}
+.sec2-div1{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div1-img{
+    width: 658px;
+    height: auto;
+}
+
+
+
+    /* Section 3 */
+
+
+.sec3{}
+.sec3-div1{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: start;
+    padding: 35px 431px;
+    margin: 0%;
+}
+.sec3-div1-p{
+    font-weight: 500;
+}

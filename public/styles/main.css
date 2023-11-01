@@ -23,11 +23,11 @@ body {
   display: flex;
   justify-content: center;
   background-color: black;
-  padding: 10px 0px 10px 0px;
+  padding: 0px 0px;
 }
 
 .head-img {
-  margin: 0px 10px 0px 0px;
+  margin-right: 5rem ;
 }
 
 .navbar {

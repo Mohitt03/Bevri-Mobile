@@ -3,7 +3,7 @@
 
 .head {
     display: flex;
-    height: 105px;
+    margin: 20px 0px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -402,7 +402,8 @@ hr {
     width: 35%;
     text-align: center;
 }
-.sec6-div2-innerr{
+
+.sec6-div2-innerr {
     position: relative;
     right: 50px;
 }
@@ -413,7 +414,8 @@ hr {
     height: 100%;
     width: 35%;
 }
-.sec6-div3-innerr{
+
+.sec6-div3-innerr {
     display: flex;
     position: relative;
     left: 43px;
@@ -424,6 +426,7 @@ hr {
     height: 33px;
     margin-right: 5px;
 }
+
 .logosvg {
     width: 40px;
     height: 40px;

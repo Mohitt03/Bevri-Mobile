@@ -1,0 +1,45 @@
+/* .order-btn{
+
+} */
+
+
+
+/* Section 1 */
+
+
+
+.sec1 {
+    background-color: white;
+
+}
+
+.sec1-div1 {
+    align-items: start;
+    background-color: white;
+    flex-direction: column;
+    padding: 25px 134px;
+
+}
+
+.sec1-div2 {
+    background-color: white;
+}
+
+.div2-head {
+    font-size: 48px;
+    font-weight: 700;
+    padding-bottom: 13px;
+}
+
+.sec1-div3 {
+    background-color: white;
+    align-items: start;
+}
+
+.div3-p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Section 2 */

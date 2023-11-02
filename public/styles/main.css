@@ -18,6 +18,15 @@ body {
 
 
 
+/* Importing Google font - Fira Sans */
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap'); */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+} */
+
 
 .head {
   display: flex;
@@ -68,7 +77,17 @@ body {
 
 
 
+
+
+
+
+
+
+
 /*First Section*/
+
+
+
 
 
 
@@ -152,7 +171,8 @@ body {
   border: none;
   background-color: #d1820c;
 }
-.a{
+
+.a {
   text-decoration: none;
   color: white
 }
@@ -419,7 +439,7 @@ body {
 /*Section 6*/
 
 
-.sec6{
+.sec6 {
   background-color: black;
   padding-top: 50px;
 }
@@ -462,13 +482,14 @@ body {
   border: none;
 }
 
-.sec6-div2{
+.sec6-div2 {
   display: flex;
 }
+
 .img {
   position: relative;
   top: -213px;
-    left: 1120px;
+  left: 1120px;
   width: 254px;
   height: 291px;
 }
@@ -488,7 +509,7 @@ Enrty ====> screen
 @media (max-width:1199px) {
   .parallax-1 {
     height: 657px;
-}
+  }
 }
 
 @media (max-width:991px) {
@@ -560,14 +581,14 @@ Enrty ====> screen
   /* Secttion 5 */
 
 
-  
+
   .sec5 {
     height: 490px;
   }
 
   .sec5-div1 {
     padding: 121px 0px 0px 0px;
-}
+  }
 
   .sec5-heading1 {
     font-size: 50px;
@@ -595,20 +616,21 @@ Enrty ====> screen
   .email {
     width: 439px;
     height: 39px;
-}
+  }
 
-.sec6-div2{
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.img {
-  position: relative;
-  top: 0px;
+  .sec6-div2 {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .img {
+    position: relative;
+    top: 0px;
     left: 0px;
-  width: 254px;
-  height: 291px;
-}
+    width: 254px;
+    height: 291px;
+  }
 }
 
 @media (max-width:767px) {
@@ -648,38 +670,39 @@ Enrty ====> screen
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
-}
+  }
 
-.sec5-btn {
-  border-radius: 14px;
-  width: 126px;
-  height: 47px;
-  font-size: 20px;
-  margin: 34px 130px 0px 146px;
-}
+  .sec5-btn {
+    border-radius: 14px;
+    width: 126px;
+    height: 47px;
+    font-size: 20px;
+    margin: 34px 130px 0px 146px;
+  }
 
   /* Section 7 */
 
   .sec6-heading {
     font-size: small;
-}
+  }
 
   .email {
     width: 274px;
     height: 24px;
-}
+  }
 
 
-.sec6-div2{
-  justify-content: center;
-}
-.img {
-  position: relative;
-  top: 71px;
+  .sec6-div2 {
+    justify-content: center;
+  }
+
+  .img {
+    position: relative;
+    top: 71px;
     left: 0px;
-  width: 254px;
-  height: 291px;
-}
+    width: 254px;
+    height: 291px;
+  }
 }
 
 @media (max-width:565px) {
@@ -692,12 +715,12 @@ Enrty ====> screen
     width: 300px;
   }
 
-    /* Section 5 */
-    .sec5-heading1 {
-      font-size: 30px;
-    }
-  
-    .sec5-heading2 {
-      font-size: 60px;
-    }
+  /* Section 5 */
+  .sec5-heading1 {
+    font-size: 30px;
+  }
+
+  .sec5-heading2 {
+    font-size: 60px;
+  }
 }

@@ -1,7 +1,154 @@
 /* .order-btn{
 
 } */
+header {
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #000;
+}
 
+header .navbar {
+    max-width: 752px;
+    margin: 0 auto;
+}
+
+.navbar-div1 {
+    display: flex;
+}
+
+.navbar-div2 {
+    display: flex;
+}
+
+.navbar-div2-btn {
+    margin-right: 25px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 6px 20px;
+}
+
+.navbar-div2-btn:hover {
+    border: none;
+    background-color: #d1820c;
+}
+
+.navbar .menu-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    margin: 0px;
+}
+
+.navbar .menu-links li a {
+    color: rgba(236, 225, 225, 0.864);
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.navbar .menu-links .language-item a {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.navbar .menu-links .language-item span {
+    font-size: 1.3rem;
+}
+
+.navbar .menu-links li a:hover {
+    color: #f2f2f2;
+}
+
+.navbar .menu-links .join-btn a {
+    border: 1px solid #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+.navbar .menu-links .join-btn a:hover {
+    color: #fff;
+    border-color: transparent;
+    background: #1dbf73;
+}
+
+
+
+.navbar #hamburger-btn {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 1.7rem;
+}
+
+.navbar #close-menu-btn {
+    position: absolute;
+    display: none;
+    color: #000;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+@media screen and (max-width: 900px) {
+    header.show-mobile-menu::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        backdrop-filter: blur(5px);
+    }
+
+    .navbar .menu-links {
+        height: 100vh;
+        max-width: 300px;
+        width: 100%;
+        background: #fff;
+        position: fixed;
+        right: -300px;
+        top: 0;
+        display: block;
+        padding: 75px 40px 0;
+        transition: right 0.2s ease;
+    }
+
+    header.show-mobile-menu .navbar .menu-links {
+        right: 0;
+    }
+
+    .navbar .menu-links li {
+        margin-bottom: 30px;
+    }
+
+    .navbar .menu-links li a {
+        color: #000;
+        font-size: 1.1rem;
+    }
+
+    .navbar .menu-links .join-btn a {
+        padding: 0;
+    }
+
+    .navbar .menu-links .join-btn a:hover {
+        color: #1dbf73;
+        background: none;
+    }
+
+    .navbar :is(#close-menu-btn, #hamburger-btn) {
+        display: inline-block;
+    }
+
+
+}
 
 
 /* Section 1 */
@@ -30,13 +177,14 @@
 .div2-head {
     font-size: 48px;
     font-weight: 700;
-    padding-bottom: 13px;   
+    padding-bottom: 13px;
 }
 
 .sec1-div3 {
     height: auto;
     background-color: white;
     align-items: start;
+    top: 0px;
 }
 
 .div3-p {
@@ -48,32 +196,77 @@
 /* Section 2 */
 
 
-.sec2{}
-.sec2-div1{
+.sec2 {}
+
+.sec2-div1 {
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.div1-img{
+
+.div1-img {
     width: 658px;
     height: auto;
 }
 
 
 
-    /* Section 3 */
+/* Section 3 */
 
 
-.sec3{}
-.sec3-div1{
+.sec3 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec3-div1 {
+    width: 670px;
+    /* display: flex; */
     flex-direction: column;
     /* justify-content: center; */
     align-items: start;
-    padding: 35px 431px;
-    margin: 0%;
+    margin: 20px 0px;
 }
-.sec3-div1-p{
+
+.sec3-div1-p {
     font-weight: 500;
+}
+
+
+
+@media (max-width: 991px) {
+    .sec1-div1 {
+        display: flex;
+    }
+}
+
+@media (max-width:767px) {
+    .sec3-div1 {
+        padding: 0px 138px;
+    }
+}
+
+@media (max-width:575px) {
+    .sec1-div1 {
+        padding: 25px 20px;
+    }
+
+    .div1-img {
+        width: 321px;
+    }
+
+    .div2-head {
+        font-size: 30px;
+    }
+
+    .sec3-div1 {
+        width: 565px;
+    }
+
+    .sec3-div1 {
+        padding: 0px 138px;
+    }
 }

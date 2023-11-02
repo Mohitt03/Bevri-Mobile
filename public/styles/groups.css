@@ -2,6 +2,7 @@
 
 } */
 header {
+    height: 80px;
     left: 0;
     top: 0;
     width: 100%;
@@ -180,7 +181,7 @@ header .navbar {
     padding-bottom: 13px;
 }
 
-.sec1-div3 {
+.Gsec1-div3 {
     height: auto;
     background-color: white;
     align-items: start;
@@ -241,6 +242,7 @@ header .navbar {
     .sec1-div1 {
         display: flex;
     }
+
 }
 
 @media (max-width:767px) {

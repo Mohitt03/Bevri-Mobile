@@ -620,6 +620,13 @@ hr {
     margin-right: 5px;
 }
 
+
+
+
+/* Responsive */
+
+
+
 @media screen and (max-width: 900px) {
     .div-img {
         width: 50%;

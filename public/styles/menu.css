@@ -370,13 +370,33 @@ header .navbar {
     margin-right: 5px;
 }
 
+.outer-span-1 {
+    overflow: hidden;
+    width: 32%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.outer-span2 {
+    overflow: hidden;
+    width: 24%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
 .outer-span:hover {
     opacity: 0.8;
     transition: all 0.555s;
 }
 
 .inner-img {
+
     filter: brightness(0.8);
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
 }
 
 .inner-span {
@@ -406,6 +426,7 @@ header .navbar {
     width: 490px;
     height: auto;
     border-radius: 10px;
+
 }
 
 .line2 {
@@ -624,7 +645,25 @@ hr {
 
 
 /* Responsive */
+/* @media screen and (max-width: 1440px) {
+    .img1 {
+        max-width: 464px;
+    }
+}
 
+@media screen and (max-width: 1472px) {
+    .img1 {
+        width: 484px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .img1 {
+        width: 335px;
+    }
+
+} */
 
 
 @media screen and (max-width: 900px) {
@@ -654,6 +693,21 @@ hr {
         color: white;
     }
 
+}
+
+@media screen and (max-width: 774px) {
+    .outer-span-1 {
+        overflow: hidden;
+        width: 91%;
+        margin-bottom: 10px;
+    }
+
+    .outer-span2 {
+        overflow: hidden;
+        width: 44%;
+
+
+    }
 }
 
 @media screen and (max-width: 638px) {
@@ -688,11 +742,13 @@ hr {
         flex-direction: column-reverse;
         height: 100%;
     }
+
     .sec2-div1-inner {
         width: 100%;
         display: flex;
         justify-content: center;
     }
+
     .sec2-t2 {
         font-size: 40px;
     }
@@ -700,19 +756,41 @@ hr {
     .sec2-btn {
         margin-bottom: 25px;
     }
+
     .sec2-img-inner {
         display: flex;
         width: 93%;
         height: 100%;
         margin: 25px 25px;
     }
+
     .sec2-div-img {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .sec2-img {
         border-radius: 21px;
         width: 100%;
+    }
+
+    .outer-span2 {
+        overflow: hidden;
+        width: 52%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+
+    .img1 {
+        width: 290px;
+        margin-bottom: 10px;
+    }
+
+    .outer-span2 {
+        overflow: hidden;
+        width: 67%;
     }
 }

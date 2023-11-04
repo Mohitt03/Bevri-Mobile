@@ -20,6 +20,9 @@ app.get("/groups", (req,res)=>{
 app.get("/reservation", (req,res)=>{
   res.render("Reservation.ejs")
 });
+app.get("/carousel", (req,res)=>{
+  res.render("carousel.ejs")
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

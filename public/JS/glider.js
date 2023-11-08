@@ -46,7 +46,8 @@
         slidesToScroll: 1,
         slidesToShow: 1,
         resizeLock: true,
-        duration: 0.5,
+        duration: 0.355,
+
         // easeInQuad
         easing: function (x, t, b, c, d) {
           return c * (t /= d) * t + b
@@ -286,7 +287,7 @@
         _.arrows.next.classList.toggle(
           'disabled',
           Math.ceil(_.ele.scrollLeft + _.containerWidth) >=
-            Math.floor(_.trackWidth) || disableArrows
+          Math.floor(_.trackWidth) || disableArrows
         )
 
         _.arrows.next.setAttribute(
@@ -485,7 +486,7 @@
       _.ele.scrollLeft =
         _.ele.scrollLeft +
         (scrollTarget - _.ele.scrollLeft) *
-          _.opt.easing(0, now, 0, 1, scrollDuration)
+        _.opt.easing(0, now, 0, 1, scrollDuration)
       if (now < scrollDuration && animateIndex === _.animate_id) {
         _window.requestAnimationFrame(animate)
       } else {
@@ -598,3 +599,19 @@
 
   return Glider
 })
+
+var select = document.querySelector('#options-animation-timing-func-select')
+
+var glide = new Glide('#options-animation-timing-func', {
+  animationTimingFunc: select.value,
+  animationDuration: 800,
+  perView: 3
+})
+
+select.addEventListener('change', function (event) {
+  glide.update({
+    animationTimingFunc: event.target.value
+  })
+})
+
+glide.mount()

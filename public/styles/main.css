@@ -75,9 +75,15 @@ body {
   margin: 0px 5px 0px 5px;
 }
 
+.nav-btn2 {
+  border: 0px;
+  /* background-color: black; */
+}
 
-
-
+.bt {
+  width: 20px;
+  height: auto;
+}
 
 
 

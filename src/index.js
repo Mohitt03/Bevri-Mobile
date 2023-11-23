@@ -38,7 +38,9 @@ const ADMIN_KEY = "1511";
 
 
 
-
+app.get("/useracc", (req,res) => {
+  res.render("useracc.ejs")
+})
 
 // app.use(express.static("public"))
 
@@ -54,8 +56,8 @@ app.get("/login", (req, res) => {
   res.render("login.ejs");
 });
 
-app.get("/About", (req, res) => {
-  res.render("About.ejs");
+app.get("/Home", (req, res) => {
+  res.render("Home.ejs");
 });
 
 app.get("/menu", (req, res) => {
@@ -107,7 +109,7 @@ app.post("/login", async function (req, res) {
       if (result) {
         // console.log(user.username);
         // res.render("secret");
-        res.render("About.ejs", { name: req.body.username });
+        res.render("Home.ejs", { name: req.body.username });
       } else {
         res.status(400).json({ error: "password doesn't match" });
       }

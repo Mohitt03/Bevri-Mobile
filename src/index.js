@@ -14,7 +14,7 @@ var app = express();
 app.use(express.static("public"))
 
 
-mongoose.connect("mongodb+srv://admin:1234@api.w1sen0x.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://admin:1234@api.w1sen0lux.mongodb.net/?retryWrites=true&w=majority");
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -37,43 +37,7 @@ const ADMIN = "MOHIT0000";
 const ADMIN_KEY = "1511";
 
 
-
-app.get("/useracc", (req,res) => {
-  res.render("useracc.ejs")
-})
-
-// app.use(express.static("public"))
-
-app.get("/", (req, res) => {
-  res.render("index.ejs");
-});
-
-app.get("/signup", (req, res) => {
-  res.render("signup.ejs");
-});
-
-app.get("/login", (req, res) => {
-  res.render("login.ejs");
-});
-
-app.get("/Home", (req, res) => {
-  res.render("Home.ejs");
-});
-
-app.get("/menu", (req, res) => {
-  res.render("menu.ejs")
-});
-
-app.get("/groups", (req, res) => {
-  res.render("groups.ejs")
-});
-
-app.get("/reservation", (req, res) => {
-  res.render("Reservation.ejs")
-});
-app.get("/carousel", (req, res) => {
-  res.render("carousel.ejs")
-});
+//      ====-----==== Login and Signup Section ====-----====
 
 
 
@@ -125,6 +89,7 @@ app.post("/login", async function (req, res) {
 
 //Handling user logout
 app.get("/logout", function (req, res) {
+
   req.logout(function (err) {
     if (err) { return next(err); }
     res.render('home.ejs');
@@ -139,6 +104,67 @@ function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();
   res.redirect("/login");
 }
+
+
+
+//      ====-----==== Path Section ====-----====
+
+
+
+app.get("/", (req, res) => {
+  res.render("index.ejs");
+});
+
+app.get("/signup", (req, res) => {
+  res.render("signup.ejs");
+});
+
+app.get("/login", (req, res) => {
+  res.render("login.ejs");
+});
+
+app.get("/Home", (req, res) => {
+  res.render("Home.ejs");
+});
+
+app.get("/menu", (req, res) => {
+  res.render("menu.ejs")
+});
+
+app.get("/groups", (req, res) => {
+  res.render("groups.ejs")
+});
+
+app.get("/reservation", (req, res) => {
+  res.render("Reservation.ejs")
+});
+
+app.get("/carousel", (req, res) => {
+  res.render("carousel.ejs")
+});
+
+app.get("/MyAccount", (req, res) => {
+  res.render("MyAccount.ejs")
+})
+
+app.get("/TableBooking", (req, res) => {
+  res.render("TableBooking.ejs")
+})
+
+
+
+
+//      ====-----==== Table Booking Section ====-----====
+
+
+
+app.post( "/TableBooking" ,  (req,res) =>{
+  res.render()
+})
+
+
+
+
 app.listen("3000", () => {
   console.log("Listening on port 3000");
 });

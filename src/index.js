@@ -5,16 +5,17 @@ express = require("express"),
   LocalStrategy = require("passport-local"),
   axios = require("axios")
 passportLocalMongoose = require("passport-local-mongoose")
+var session = require('express-session');
 
 
 
 const User = require("../models/User");
-
+const Reservation = require("../models/Reservation");
+const { text } = require("body-parser");
 var app = express();
 app.use(express.static("public"))
 
-
-mongoose.connect("mongodb+srv://admin:1234@api.w1sen0lux.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://admin:1234@api.w1sen0x.mongodb.net/?retryWrites=true&w=majority");
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -24,7 +25,6 @@ app.use(require("express-session")({
   resave: false,
   saveUninitialized: false
 }));
-
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -158,11 +158,15 @@ app.get("/TableBooking", (req, res) => {
 
 
 
-app.post( "/TableBooking" ,  (req,res) =>{
-  res.render()
-})
+app.post("/TableBooking", async (req, res) => {
+  const reservation = await Reservation.create({
+    text : req.body.text
+  });
+  return res.redirect("TableBooking")
+});
 
 
+//      ====-----==== Server Rendering Section ====-----====
 
 
 app.listen("3000", () => {

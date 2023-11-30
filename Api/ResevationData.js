@@ -27,7 +27,7 @@ app.get('/Data', async (req, res) => {
 
 })
 
-app.get('/User/:id', async (req, res) => {
+app.get('/Data/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const userData = await UserData.findById(id);
@@ -38,7 +38,7 @@ app.get('/User/:id', async (req, res) => {
 })
 
 
-app.post('/User', async (req, res) => {
+app.post('/Data', async (req, res) => {
     try {
         const userData = await UserData.create(req.body)
         res.status(200).json(userData);
@@ -50,7 +50,7 @@ app.post('/User', async (req, res) => {
 })
 
 // update a product
-app.put('/User/:id', async (req, res) => {
+app.put('/Data/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const userData = await UserData.findByIdAndUpdate(id, req.body);
@@ -69,7 +69,7 @@ app.put('/User/:id', async (req, res) => {
 
 // delete a product
 
-app.delete('/User/:id', async (req, res) => {
+app.delete('/Data/:id', async (req, res) => {
     const userKey = (req.query.key)
     if (userKey === masterKey) {
 

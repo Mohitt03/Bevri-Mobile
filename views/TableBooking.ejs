@@ -9,8 +9,27 @@
 
 <body>
     <form action="/TableBooking" method="post">
-        <input type="text" placeholder="Text" name="text">
-        <!-- <label></label> -->
+        <!-- <input type="text" placeholder="First Name" name="text"><br> -->
+        
+        <label>Choose a Restaurant:</label>
+        <select name="restaurant">
+            <option value="Bevri Los Altos">Bevri-Los Altos</option>
+            <option value="Bevri Palo Alto">Bevri-Palo Alto</option>
+        </select><br>
+        <input type="date" id="my_hidden_input" name="date"><br>
+        <label for="Time">Choose a Time:</label>
+        <select name="time">
+            <option value="8:00am">8:00am</option>
+            <option value="9:00am">9:00am</option>
+            <option value="10:00am">10:00am</option>
+            <option value="11:00am">11:00am</option>
+        </select><br>
+        <select name="people">
+            <option value="2 people">2 people</option>
+            <option value="3 people">3 people</option>
+            <option value="4 people">4 people</option>
+            <option value="5 people">5 people</option>
+        </select>
         <button type="submit">Submit</button>
     </form>
 </body>

@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 
-const UserData = require('../models/Reservation')
+const UserData = require('../models/Reservations')
 const app = express()
 const masterKey = "123456789"
 
@@ -49,7 +49,7 @@ app.post('/Data', async (req, res) => {
     }
 })
 
-// update a product
+// update a Data
 app.put('/Data/:id', async (req, res) => {
     try {
         const { id } = req.params;

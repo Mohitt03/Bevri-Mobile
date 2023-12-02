@@ -7,10 +7,8 @@ express = require("express"),
 passportLocalMongoose = require("passport-local-mongoose")
 var session = require('express-session');
 
-
-
+const Reservation = require("../models/Reservations");
 const User = require("../models/User");
-const Reservation = require("../models/Reservation");
 const { text } = require("body-parser");
 var app = express();
 app.use(express.static("public"))
@@ -31,7 +29,7 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-const API_URL = "http://localhost:4000"
+const Reservation_URL = "http://localhost:2000"
 const API_URL_USER = "http://localhost:2000"
 const ADMIN = "MOHIT0000";
 const ADMIN_KEY = "1511";
@@ -112,7 +110,7 @@ function isLoggedIn(req, res, next) {
 
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("Home.ejs");
 });
 
 app.get("/signup", (req, res) => {
@@ -158,13 +156,44 @@ app.get("/TableBooking", (req, res) => {
 
 
 
-app.post("/TableBooking", async (req, res) => {
-  const reservation = await Reservation.create({
-    text : req.body.text
-  });
-  return res.redirect("TableBooking")
-});
+// app.post("/TableBooking", async (req, res) => {
+// const reservation = await Reservation.create({
 
+//   restaurant: req.body.restaurant,
+//   date: req.body.date,
+//   time: req.body.time,
+//   people: req.body.people
+// });
+//   return res.redirect("TableBooking")
+// });
+
+app.post("/TableBooking", async (req, res) => {
+  try {
+
+    // const response = await axios.get(`${Reservation_URL}/parking?key=123456789`);
+
+    // check if the Reservation, date and time exists
+    const Restaurant = await Reservation.findOne({ restaurant: req.body.restaurant });
+    const Date = await Reservation.findOne({ date: req.body.date });
+    const Time = await Reservation.findOne({ time: req.body.time });
+    if (Restaurant && Date && Time) {
+      return res.redirect("TableBooking")
+    }
+    else {
+      const reservation = await Reservation.create({
+
+        restaurant: req.body.restaurant,
+        date: req.body.date,
+        time: req.body.time,
+        people: req.body.people
+      });
+      return res.redirect("TableBooking")
+
+    }
+  } catch (error) {
+    res.status(400).json({ error });
+  }
+});
 
 //      ====-----==== Server Rendering Section ====-----====
 

@@ -10,27 +10,43 @@
 <body>
     <form action="/TableBooking" method="post">
         <!-- <input type="text" placeholder="First Name" name="text"><br> -->
-        
+
         <label>Choose a Restaurant:</label>
-        <select name="restaurant">
+        <select name="restaurant" required>
             <option value="Bevri Los Altos">Bevri-Los Altos</option>
             <option value="Bevri Palo Alto">Bevri-Palo Alto</option>
         </select><br>
-        <input type="date" id="my_hidden_input" name="date"><br>
+        <input type="date" id="my_hidden_input" name="date" required><br>
         <label for="Time">Choose a Time:</label>
-        <select name="time">
+        <select name="time" required>
             <option value="8:00am">8:00am</option>
             <option value="9:00am">9:00am</option>
             <option value="10:00am">10:00am</option>
             <option value="11:00am">11:00am</option>
         </select><br>
-        <select name="people">
+        <select name="people" required>
             <option value="2 people">2 people</option>
             <option value="3 people">3 people</option>
             <option value="4 people">4 people</option>
             <option value="5 people">5 people</option>
         </select>
+        <!-- <a href="#">Order</a> -->
         <button type="submit">Submit</button>
+        <select name="seat" required>
+            <option value="Standard">Standard ₹200</option>
+            <option value="Premium">Premium ₹800</option>
+        </select><br>
+        <label>Select an ocassion: (optional)</label>
+        <select name="ocassion">
+            <option value="Birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
+            <option value="Date Night">Date Night</option>
+            <option value="Business Meal">Business Meal</option>
+            <option value="Celebration">Celebration</option>
+        </select><br>
+
+        <input type="text" name="username" placeholder="Username"><br>
+        <button type="submit">Complete Reservation</button>
     </form>
 </body>
 

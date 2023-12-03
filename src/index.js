@@ -149,6 +149,10 @@ app.get("/TableBooking", (req, res) => {
   res.render("TableBooking.ejs")
 })
 
+app.get("/TableBooking2", (req, res) => {
+  res.render("TableBooking2.ejs")
+})
+
 
 
 
@@ -168,7 +172,7 @@ app.get("/TableBooking", (req, res) => {
 // });
 
 app.post("/TableBooking", async (req, res) => {
-  try {
+  // try {
 
     // const response = await axios.get(`${Reservation_URL}/parking?key=123456789`);
 
@@ -185,14 +189,17 @@ app.post("/TableBooking", async (req, res) => {
         restaurant: req.body.restaurant,
         date: req.body.date,
         time: req.body.time,
-        people: req.body.people
+        people: req.body.people,
+        seat: req.body.seat,
+        ocassion: req.body.ocassion,
+        username: req.body.username
       });
-      return res.redirect("TableBooking")
+      res.redirect("TableBooking")
 
     }
-  } catch (error) {
-    res.status(400).json({ error });
-  }
+//   } catch (error) {
+//     res.status(400).json({ error });
+//   }
 });
 
 //      ====-----==== Server Rendering Section ====-----====

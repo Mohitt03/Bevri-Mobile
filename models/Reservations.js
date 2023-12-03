@@ -1,3 +1,4 @@
+const { text } = require('body-parser');
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const passportLocalMongoose = require('passport-local-mongoose');
@@ -7,19 +8,28 @@ var Reservation = new Schema({
     // },
     restaurant: {
         type: String,
-        required:true
+        required: true
     },
     date: {
         type: String,
-        required:true
+        required: true
     },
     time: {
         type: String,
-        required:true
+        required: true
     },
     people: {
         type: String,
-        required:true
+        required: true
+    },
+    seat: {
+        type: String
+    },
+    ocassion: {
+        type: String
+    },
+    username: {
+        type: String
     }
 },
     {

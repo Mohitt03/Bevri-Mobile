@@ -109,9 +109,9 @@ function isLoggedIn(req, res, next) {
 
 
 
-app.get("/", (req, res) => {
-  res.render("Home.ejs");
-});
+// app.get("/", (req, res) => {
+//   res.render("Home.ejs");
+// });
 
 app.get("/signup", (req, res) => {
   res.render("signup.ejs");
@@ -149,8 +149,8 @@ app.get("/TableBooking", (req, res) => {
   res.render("TableBooking.ejs")
 })
 
-app.get("/TableBooking2", (req, res) => {
-  res.render("TableBooking2.ejs")
+app.get("/TableBookingComplete", (req, res) => {
+  res.render("TableBookingComplete.ejs")
 })
 
 
@@ -172,35 +172,33 @@ app.get("/TableBooking2", (req, res) => {
 // });
 
 app.post("/TableBooking", async (req, res) => {
-  // try {
 
-    // const response = await axios.get(`${Reservation_URL}/parking?key=123456789`);
 
-    // check if the Reservation, date and time exists
-    const Restaurant = await Reservation.findOne({ restaurant: req.body.restaurant });
-    const Date = await Reservation.findOne({ date: req.body.date });
-    const Time = await Reservation.findOne({ time: req.body.time });
-    if (Restaurant && Date && Time) {
-      return res.redirect("TableBooking")
-    }
-    else {
-      const reservation = await Reservation.create({
+  // check if the Reservation, date and time exists
+  const Restaurant = await Reservation.findOne({ restaurant: req.body.restaurant });
+  const Date = await Reservation.findOne({ date: req.body.date });
+  const Time = await Reservation.findOne({ time: req.body.time });
+  if (Restaurant && Date && Time) {
 
-        restaurant: req.body.restaurant,
-        date: req.body.date,
-        time: req.body.time,
-        people: req.body.people,
-        seat: req.body.seat,
-        ocassion: req.body.ocassion,
-        username: req.body.username
-      });
-      res.redirect("TableBooking")
+    return res.redirect("TableBooking")
+  }
+  else {
+    const reservation = await Reservation.create({
 
-    }
-//   } catch (error) {
-//     res.status(400).json({ error });
-//   }
+      restaurant: req.body.restaurant,
+      date: req.body.date,
+      time: req.body.time,
+      people: req.body.people,
+      seat: req.body.seat,
+      ocassion: req.body.ocassion,
+      username: req.body.username
+    });
+    res.render("TableBookingComplete.ejs")
+
+  }
+
 });
+
 
 //      ====-----==== Server Rendering Section ====-----====
 

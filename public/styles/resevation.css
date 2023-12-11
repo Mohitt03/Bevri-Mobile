@@ -6,6 +6,27 @@ header {
     background-color: #000;
 }
 
+/* Reservation */
+
+.Rsec {
+    text-align: center;
+    padding: 49px 0px 15px 0px;
+}
+
+.Ra {
+    color: #000;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 10px;
+    transition: all 0.7s;
+}
+.Ra:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
 header .navbar {
     max-width: 752px;
     margin: 0 auto;

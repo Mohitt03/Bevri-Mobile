@@ -2,6 +2,14 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const passportLocalMongoose = require('passport-local-mongoose');
 var Reservation = new Schema({
+    username: {
+        type: String,
+        required: true
+    },
+    number: {
+        type: Number,
+        required: true
+    },
     restaurant: {
         type: String,
         required: true

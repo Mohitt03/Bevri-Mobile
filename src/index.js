@@ -10,13 +10,15 @@ var session = require('express-session');
 const Reservation = require("../models/Reservations");
 const User = require("../models/User");
 const { text } = require("body-parser");
+const userData = require('../public/JS/userData');
+const { response } = require("express");
 var app = express();
 app.use(express.static("public"))
 
 mongoose.connect("mongodb+srv://admin:1234@api.w1sen0x.mongodb.net/?retryWrites=true&w=majority");
 
-app.set("view engine", "ejs");
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.set('view engine', 'ejs');
+// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(require("express-session")({
   secret: "Rusty is a dog",
@@ -29,8 +31,8 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-const Reservation_URL = "http://localhost:2000"
-const API_URL_USER = "http://localhost:2000"
+const API_URL = "http://localhost:2000"
+// const API_URL_USER = "http://localhost:2000"
 const ADMIN = "MOHIT0000";
 const ADMIN_KEY = "1511";
 
@@ -65,13 +67,17 @@ app.post("/login", async function (req, res) {
   try {
     // check if the user exists
     const user = await User.findOne({ username: req.body.username });
+    const username = req.body.username; // Assuming you retrieve the username from the login form
+    req.session.username = username;
+    userData.setUsername(username);
+
     if (user) {
       //check if password matches
       const result = req.body.password === user.password;
       if (result) {
         // console.log(user.username);
         // res.render("secret");
-        res.render("Home.ejs", { name: req.body.username });
+        res.render("Home.ejs", { name: req.session.username });
       } else {
         res.status(400).json({ error: "password doesn't match" });
       }
@@ -122,7 +128,8 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/Home", (req, res) => {
-  res.render("Home.ejs");
+  const username = req.session.username;
+  res.render("Home.ejs", { name: username });
 });
 
 app.get("/menu", (req, res) => {
@@ -134,6 +141,7 @@ app.get("/groups", (req, res) => {
 });
 
 app.get("/reservation", (req, res) => {
+
   res.render("Reservation.ejs")
 });
 
@@ -149,10 +157,26 @@ app.get("/TableBooking", (req, res) => {
   res.render("TableBooking.ejs")
 })
 
+app.get("/TableBooking2", (req, res) => {
+  res.render("TableBooking2.ejs")
+})
+
+
 app.get("/TableBookingComplete", (req, res) => {
   res.render("TableBookingComplete.ejs")
 })
 
+app.get("/Admin", (req, res) => {
+  res.render("Admin.ejs")
+})
+
+app.get("/users", (req, res) => {
+  res.render("users.ejs")
+})
+
+// app.get("/Admin", (req, res) => {
+//   res.render("Admin.ejs")
+// })
 
 
 
@@ -180,11 +204,13 @@ app.post("/TableBooking", async (req, res) => {
   const Time = await Reservation.findOne({ time: req.body.time });
   if (Restaurant && Date && Time) {
 
-    return res.redirect("TableBooking")
+    return res.render("TableBooking", { avialaibility: "none" })
+
   }
   else {
     const reservation = await Reservation.create({
-
+      username: req.body.username,
+      number: req.body.number,
       restaurant: req.body.restaurant,
       date: req.body.date,
       time: req.body.time,
@@ -198,6 +224,67 @@ app.post("/TableBooking", async (req, res) => {
   }
 
 });
+
+//      ====-----==== Admin  Section ====-----====
+
+// Orders//
+
+
+app.get("/orders", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/Data/?key=123456789`);
+    console.log(response);
+    res.render("orders.ejs", { datas: response.data });
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+});
+
+app.get("/api/Data/delete/:id", async (req, res) => {
+  try {
+    await axios.delete(`${API_URL}/Data/${req.params.id}/?key=123456789`);
+    res.redirect("/orders");
+  } catch (error) {
+    res.status(500).json({ message: "Error deleting post" });
+  }
+});
+
+
+
+// Users Data//
+
+
+app.get("/Users", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/Udata/?key=123456789`);
+    console.log(response);
+    res.render("Users", { datas: response.data });
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+});
+
+app.get("/api/Udata/delete/:id", async (req, res) => {
+  try {
+    await axios.delete(`${API_URL}/Udata/${req.params.id}/?key=123456789`);
+    res.redirect("/users");
+  } catch (error) {
+    res.status(500).json({ message: "Error deleting post" });
+  }
+});
+
+
+
+// Products Data//
+
+
+
+
+
+
+
+
+
 
 
 //      ====-----==== Server Rendering Section ====-----====

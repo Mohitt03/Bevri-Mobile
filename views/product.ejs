@@ -17,6 +17,7 @@
             <th>Image link</th>
             <th>Created At</th>
             <th>Updated At</th>
+            <th><a href="/createproduct" >Create Product</a></th>
         </tr>
         <% datas.forEach(data=> { %>
             <tr>
@@ -27,7 +28,7 @@
                 <td><%=  data.img %></td>
                 <td><%=  data.createdAt %></td>
                 <td><%=  data.updatedAt %></td>
-                <td><a class="delete" href="/api/Udata/delete/<%= data._id %>/?key=123456789">Delete</a></td> 
+                <td><a class="delete" href="/api/Pdata/delete/<%= data._id %>/?key=123456789">Delete</a></td> 
             </tr>
     
             <% }); %>

@@ -156,15 +156,15 @@ app.post('/Udata', async (req, res) => {
 
 app.post("/Udata", (req, res) => {
     const user = {
-      id: newId,
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
+        id: newId,
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
     };
     lastId = newId;
     LoginData.push(user);
     res.status(201).json(user);
-  });
+});
 
 // update a Data
 app.put('/Udata/:id', async (req, res) => {
@@ -187,8 +187,7 @@ app.put('/Udata/:id', async (req, res) => {
 // delete a product
 
 app.delete('/Udata/:id', async (req, res) => {
-    const userKey = (req.query.key)
-    if (userKey === masterKey) {
+
 
         try {
             const userKey = (req.query.key)
@@ -203,14 +202,7 @@ app.delete('/Udata/:id', async (req, res) => {
         catch (error) {
             res.status(500).json({ message: error.message })
         }
-    }
-    else {
-        res
-            .status(404)
-            .json({ error: "You are not authorized" })
-    }
-
-})
+    })
 
 
 
@@ -255,7 +247,7 @@ app.get('/Pdata/:id', async (req, res) => {
 app.post('/Pdata', async (req, res) => {
     try {
         const productsData = await ProductsData.create(req.body)
-        res.status(200).json(userData);
+        res.status(200).json(ProductsData);
 
     } catch (error) {
         console.log(error.message);
@@ -274,7 +266,7 @@ app.put('/Pdata/:id', async (req, res) => {
         }
         const updatedloginData = await ProductsData.findById(id);
         res.status(200).json(updatedloginData);
-productsData
+        productsData
     } catch (error) {
         res.status(500).json({ message: error.message })
     }
@@ -290,7 +282,7 @@ app.delete('/Pdata/:id', async (req, res) => {
         try {
             const userKey = (req.query.key)
             const { id } = req.params;
-            const productsDataproductsData = await ProductsData.findByIdAndDelete(id);
+            const productsData = await ProductsData.findByIdAndDelete(id);
             if (!productsData) {
                 return res.status(404).json({ message: `cannot find any Parking Data with ID ${id}` })
             }
@@ -308,6 +300,7 @@ app.delete('/Pdata/:id', async (req, res) => {
     }
 
 })
+
 
 mongoose.set("strictQuery", false)
 mongoose.

@@ -9,15 +9,15 @@ var session = require('express-session');
 
 const Reservation = require("../models/Reservations");
 const User = require("../models/User");
+const Product = require("../models/Products");
 const { text } = require("body-parser");
-const userData = require('../public/JS/userData');
 var app = express();
 app.use(express.static("public"))
 
 mongoose.connect("mongodb+srv://admin:1234@api.w1sen0x.mongodb.net/?retryWrites=true&w=majority");
 
 app.set('view engine', 'ejs');
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(require("express-session")({
   secret: "Rusty is a dog",
@@ -46,14 +46,14 @@ app.get("/signup", function (req, res) {
 });
 
 // Handling user registration
-app.post("/signup/Udata", async (req, res) => {
-  try {
-    const response = await axios.post(`${API_URL}/posts`, req.body);
-    console.log(response.data);
-    res.render("login.ejs");
-  } catch (error) {
-    res.status(500).json({ message: "Error creating post" });
-  }
+app.post("/signup", async (req, res) => {
+  const user = await User.create({
+    username: req.body.username,
+    email: req.body.email,
+    password: req.body.password
+  });
+
+  return res.render("login");
 });
 
 //Showing login form
@@ -64,11 +64,11 @@ app.get("/login", function (req, res) {
 //Handling user login
 app.post("/login", async function (req, res) {
   try {
+
     // check if the user exists
     const user = await User.findOne({ username: req.body.username });
     const username = req.body.username; // Assuming you retrieve the username from the login form
-    req.session.username = username;
-    userData.setUsername(username);
+    req.session.username = username; 1
 
     if (user) {
       //check if password matches
@@ -84,7 +84,7 @@ app.post("/login", async function (req, res) {
       res.status(400).json({ error: "User doesn't exist" });
     }
   } catch (error) {
-    res.status(400).json({ error });
+    console.log(error.message);
   }
 });
 
@@ -177,33 +177,31 @@ app.get("/Admin", (req, res) => {
 
 app.post("/TableBooking", async (req, res) => {
   try {
-    
 
+    // check if the Reservation, date and time exists
+    const Restaurant = await Reservation.findOne({ restaurant: req.body.restaurant });
+    const Date = await Reservation.findOne({ date: req.body.date });
+    const Time = await Reservation.findOne({ time: req.body.time });
+    if (Restaurant && Date && Time) {
 
-  // check if the Reservation, date and time exists
-  const Restaurant = await Reservation.findOne({ restaurant: req.body.restaurant });
-  const Date = await Reservation.findOne({ date: req.body.date });
-  const Time = await Reservation.findOne({ time: req.body.time });
-  if (Restaurant && Date && Time) {
+      return res.render("TableBooking", { avialaibility: "none" })
 
-    return res.render("TableBooking", { avialaibility: "none" })
+    }
+    else {
+      const reservation = await Reservation.create({
+        username: req.body.username,
+        number: req.body.number,
+        restaurant: req.body.restaurant,
+        date: req.body.date,
+        time: req.body.time,
+        people: req.body.people,
+        seat: req.body.seat,
+        ocassion: req.body.ocassion,
+      });
+      res.render("TableBookingComplete.ejs")
 
-  }
-  else {
-    const reservation = await Reservation.create({
-      username: req.body.username,
-      number: req.body.number,
-      restaurant: req.body.restaurant,
-      date: req.body.date,
-      time: req.body.time,
-      people: req.body.people,
-      seat: req.body.seat,
-      ocassion: req.body.ocassion,
-      username: req.body.username
-    });
-    res.render("TableBookingComplete.ejs")
-
-  }  } catch (error) {
+    }
+  } catch (error) {
     console.log(error.message);
   }
 
@@ -250,11 +248,11 @@ app.get("/Users", async (req, res) => {
 
 app.get("/api/Udata/delete/:id", async (req, res) => {
   try {
-  await axios.delete(`${API_URL}/Udata/${req.params.id}/?key=123456789`);
-  res.redirect("/users");
-} catch (error) {
-  res.status(500).json({ error: error });
-}
+    await axios.delete(`${API_URL}/Udata/${req.params.id}/?key=123456789`);
+    res.redirect("/users");
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
 
 });
 
@@ -274,14 +272,39 @@ app.get("/products", async (req, res) => {
   }
 });
 
-app.get("/api/Udata/delete/:id", async (req, res) => {
+app.get("/createproduct", (req, res) => {
+  res.render("createproduct.ejs")
+});
+app.post("/createproduct", async (req, res) => {
+
+  try {
+
+    const product = await Product.create({
+      name: req.body.name,
+      price: req.body.price,
+      brief: req.body.brief,
+      img: req.body.img
+    });
+
+    res.redirect("/products");
+
+  } catch (error) {
+    console.log(error.message);
+  }
+
+
+})
+
+app.get("/api/Pdata/delete/:id", async (req, res) => {
   try {
     await axios.delete(`${API_URL}/Pdata/${req.params.id}/?key=123456789`);
-    res.redirect("/users");
+    res.redirect("/products");
   } catch (error) {
-    res.status(500).json({ message: "Error deleting post" });
+    res.json({ message: "Error deleting post" });
   }
 });
+
+
 
 
 

@@ -11,22 +11,39 @@
 <body>
     <table>
         <tr>
-            <th>ID</th>
             <th>Username</th>
+            <th>ID</th>
             <th>Email</th>
             <th>Password</th>
+            <th>CreatedAt</th>
+            <th>UpdatedAt</th>
         </tr>
         <% datas.forEach(data=> { %>
             <tr>
                 <td>
-                    <%= datas._id %>
+                    <%= data.username %>
                 </td>
-
+                <td>
+                    <%= data._id %>
+                </td>
+                <td>
+                    <%= data.email %>
+                </td>
+                <td>
+                    <%= data.password %>
+                </td>
+                <td>
+                    <%= data.createdAt %>
+                </td>
+                <td>
+                    <%= data.updatedAt %>
+                </td>
+                <td><a class="delete" href="/api/Udata/delete/<%= data._id %>/?key=123456789">Delete</a></td>
             </tr>
+
             <% }); %>
 
     </table>
-
 </body>
 
 </html>

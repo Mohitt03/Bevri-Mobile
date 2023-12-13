@@ -154,6 +154,18 @@ app.post('/Udata', async (req, res) => {
     }
 })
 
+app.post("/Udata", (req, res) => {
+    const user = {
+      id: newId,
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password,
+    };
+    lastId = newId;
+    LoginData.push(user);
+    res.status(201).json(user);
+  });
+
 // update a Data
 app.put('/Udata/:id', async (req, res) => {
     try {

@@ -11,13 +11,12 @@ const Reservation = require("../models/Reservations");
 const User = require("../models/User");
 const { text } = require("body-parser");
 const userData = require('../public/JS/userData');
-const { response } = require("express");
 var app = express();
 app.use(express.static("public"))
 
 mongoose.connect("mongodb+srv://admin:1234@api.w1sen0x.mongodb.net/?retryWrites=true&w=majority");
 
-// app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 // app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(require("express-session")({
@@ -47,14 +46,14 @@ app.get("/signup", function (req, res) {
 });
 
 // Handling user registration
-app.post("/signup", async (req, res) => {
-  const user = await User.create({
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password
-  });
-
-  return res.render("login");
+app.post("/signup/Udata", async (req, res) => {
+  try {
+    const response = await axios.post(`${API_URL}/posts`, req.body);
+    console.log(response.data);
+    res.render("login.ejs");
+  } catch (error) {
+    res.status(500).json({ message: "Error creating post" });
+  }
 });
 
 //Showing login form
@@ -119,17 +118,17 @@ function isLoggedIn(req, res, next) {
 //   res.render("Home.ejs");
 // });
 
-app.get("/signup", (req, res) => {
-  res.render("signup.ejs");
-});
+// app.get("/signup", (req, res) => {
+//   res.render("signup.ejs");
+// });
 
 app.get("/login", (req, res) => {
   res.render("login.ejs");
 });
 
 app.get("/Home", (req, res) => {
-  const username = req.session.username;
-  res.render("Home.ejs", { name: username });
+  // const username = req.session.username;
+  res.render("Home.ejs");
 });
 
 app.get("/menu", (req, res) => {
@@ -170,32 +169,15 @@ app.get("/Admin", (req, res) => {
   res.render("Admin.ejs")
 })
 
-app.get("/users", (req, res) => {
-  res.render("users.ejs")
-})
-
-// app.get("/Admin", (req, res) => {
-//   res.render("Admin.ejs")
-// })
 
 
 
 //      ====-----==== Table Booking Section ====-----====
 
 
-
-// app.post("/TableBooking", async (req, res) => {
-// const reservation = await Reservation.create({
-
-//   restaurant: req.body.restaurant,
-//   date: req.body.date,
-//   time: req.body.time,
-//   people: req.body.people
-// });
-//   return res.redirect("TableBooking")
-// });
-
 app.post("/TableBooking", async (req, res) => {
+  try {
+    
 
 
   // check if the Reservation, date and time exists
@@ -221,6 +203,8 @@ app.post("/TableBooking", async (req, res) => {
     });
     res.render("TableBookingComplete.ejs")
 
+  }  } catch (error) {
+    console.log(error.message);
   }
 
 });
@@ -256,9 +240,9 @@ app.get("/api/Data/delete/:id", async (req, res) => {
 
 app.get("/Users", async (req, res) => {
   try {
-    const response = await axios.get(`${API_URL}/Udata/?key=123456789`);
-    console.log(response);
-    res.render("Users", { datas: response.data });
+    const uresponse = await axios.get(`${API_URL}/Udata/?key=123456789`);
+    console.log(uresponse);
+    res.render("Users.ejs", { datas: uresponse.data });
   } catch (error) {
     res.status(500).json({ error: error });
   }
@@ -266,11 +250,12 @@ app.get("/Users", async (req, res) => {
 
 app.get("/api/Udata/delete/:id", async (req, res) => {
   try {
-    await axios.delete(`${API_URL}/Udata/${req.params.id}/?key=123456789`);
-    res.redirect("/users");
-  } catch (error) {
-    res.status(500).json({ message: "Error deleting post" });
-  }
+  await axios.delete(`${API_URL}/Udata/${req.params.id}/?key=123456789`);
+  res.redirect("/users");
+} catch (error) {
+  res.status(500).json({ error: error });
+}
+
 });
 
 
@@ -279,7 +264,24 @@ app.get("/api/Udata/delete/:id", async (req, res) => {
 
 
 
+app.get("/products", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/Pdata/?key=123456789`);
+    console.log(response);
+    res.render("product.ejs", { datas: response.data });
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+});
 
+app.get("/api/Udata/delete/:id", async (req, res) => {
+  try {
+    await axios.delete(`${API_URL}/Pdata/${req.params.id}/?key=123456789`);
+    res.redirect("/users");
+  } catch (error) {
+    res.status(500).json({ message: "Error deleting post" });
+  }
+});
 
 
 

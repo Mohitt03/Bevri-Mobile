@@ -17,6 +17,10 @@ var Products = new Schema({
     img: {
         type: String,
         required: true
+    },
+    img2: {
+        type: String,
+        required: true
     }
 },
     {

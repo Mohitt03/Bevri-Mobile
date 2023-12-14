@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
-    <form action="/createproduct" method="post">
-      <input type="text" name="name" placeholder="Product Name">  
-      <input type="text" name="price" placeholder="Product Price">  
-      <input type="text" name="brief" placeholder="Product Brief">  
-      <input type="text" name="img" placeholder="Image Link">  
-      <button>Submit</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/createproduct.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Create Product</h1>
+    <form id="newPostForm"  action="/createproduct" method="post">
+
+      <input type="text" name="name" placeholder="Product Name" required>
+      <input type="text" name="price" placeholder="Product Price">
+      <textarea name="brief" placeholder="Product Brief" required rows="10"></textarea>
+      <input type="text" name="img" placeholder="Image Link">
+      <input type="text" name="img2" placeholder="Image Link">
+      <button class="full-width" type="submit">Create</button>
     </form>
-    
+  </div>
 </body>
+
 </html>

@@ -283,7 +283,9 @@ app.post("/createproduct", async (req, res) => {
       name: req.body.name,
       price: req.body.price,
       brief: req.body.brief,
-      img: req.body.img
+      img: req.body.img,
+      img2: req.body.img2
+      
     });
 
     res.redirect("/products");

@@ -1,16 +1,37 @@
-body{
+body {
     font-family: sans-serif;
 }
-table,th,td {
+
+table,
+th,
+td {
     border: 1px solid black;
     border-collapse: collapse;
 }
 
-th,td {
+th,
+td {
     padding: 10px;
 }
-.btn{
+
+td {
+    max-width: 300px;
+    overflow-x: scroll;
+}
+tr{
+    max-height: 100px;
+    overflow-y: scroll;
+
+}
+
+.btn {
     position: absolute;
     left: 1263px;
     top: 110px;
+}
+
+.overflow {
+    width: 500px;
+    height: auto;
+    overflow: scroll;
 }

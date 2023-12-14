@@ -15,6 +15,7 @@
             <th>Price</th>
             <th>Brief</th>
             <th>Image link</th>
+            <th>Image Second link</th>
             <th>Created At</th>
             <th>Updated At</th>
             <th><a href="/createproduct" >Create Product</a></th>
@@ -26,6 +27,7 @@
                 <td><%=  data.price %></td>
                 <td><%=  data.brief %></td>
                 <td><%=  data.img %></td>
+                <td><%=  data.img2 %></td>
                 <td><%=  data.createdAt %></td>
                 <td><%=  data.updatedAt %></td>
                 <td><a class="delete" href="/api/Pdata/delete/<%= data._id %>/?key=123456789">Delete</a></td> 

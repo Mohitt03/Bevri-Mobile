@@ -271,7 +271,7 @@ app.get("/products", async (req, res) => {
     res.status(500).json({ error: error });
   }
 });
-
+  
 app.get("/createproduct", (req, res) => {
   res.render("createproduct.ejs")
 });
@@ -284,7 +284,7 @@ app.post("/createproduct", async (req, res) => {
       price: req.body.price,
       brief: req.body.brief,
       img: req.body.img,
-      img2: req.body.img2
+      img2: req.body.img2   
       
     });
 

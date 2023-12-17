@@ -259,6 +259,10 @@ body {
   background-color: #d1820c;
 }
 
+.reservation {
+  text-decoration: none;
+  color: white;
+}
 
 
 /* Parallax Section */

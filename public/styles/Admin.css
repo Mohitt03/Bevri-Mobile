@@ -15,7 +15,7 @@ td {
 }
 
 td {
-    max-width: 300px;
+    max-width: 217px;
     overflow-x: scroll;
 }
 tr{
@@ -34,4 +34,9 @@ tr{
     width: 500px;
     height: auto;
     overflow: scroll;
+}
+.breif{
+    height: 44px;
+    overflow-y: hidden;
+    width: 243px;
 }

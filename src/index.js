@@ -34,7 +34,19 @@ const API_URL = "http://localhost:2000"
 // const API_URL_USER = "http://localhost:2000"
 const ADMIN = "MOHIT0000";
 const ADMIN_KEY = "1511";
+//      ====-----==== Search Function ====-----====
 
+app.get("/search/:key", async (req,res) =>{
+  let data = await Product.find(
+    {
+      "$or":[
+        {name:{$regex:req.params.key}},
+        {brief:{$regex:req.params.key}}
+      ]
+    }
+  )
+  res.send(data)
+})
 
 //      ====-----==== Login and Signup Section ====-----====
 

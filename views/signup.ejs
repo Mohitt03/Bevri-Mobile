@@ -5,22 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link href="\styles\main.css" rel="stylesheet">
 </head>
 
-<body>
-
-    <form action="/signup" method="post">
-        <label>Username :</label>
-        <input type="text" placeholder="Username" name="username">
-        <label>Email :</label>
-        <input type="email" placeholder="example@gmail.com" name="email">
-        <label>Password :</label>
-        <input type="password" placeholder="*******" name="password">
-        <button>Submit</button>
-    </form>
-    <div class="bottom-link">
-        Already have an account?
-        <a href="/login" id="login-link">Login</a>
+<body class="Signup_body">
+    <div class="form">
+        <div class="inner_form">
+            <h1 class="sign-h1">Sign In</h1>
+            <form action="/signup" method="post">
+                <div class="input_div I1">
+                    <input class="input" type="text" placeholder="Username" name="username">
+                </div>
+                <div class="input_div I2">
+                    <input class="input" type="email" placeholder="example@gmail.com" name="email">
+                </div>
+                <div class="input_div I3">
+                    <input class="input" type="password" placeholder="*******" name="password">
+                </div>
+                <button class="form_btn">Submit</button>
+            </form>
+            <div class="bottom-link form-box">
+                Already have an account?
+                <a href="/login" id="login-link">Login</a>
+            </div>
+        </div>
     </div>
 </body>
 

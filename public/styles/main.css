@@ -12,7 +12,72 @@ body {
   height: auto;
 }
 
+/* Signup and Login Section */
+.Signup_body {
+  background-color: #6d9c222e;
+}
 
+.sign-h1 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.input_div {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input {
+  height: 100%;
+  background: none;
+  outline: none;
+  font-size: 0.95rem;
+  padding: 0 15px;
+  border: 1px solid #ed540d;
+  border-radius: 3px;
+}
+
+.form_btn {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 25px 0;
+  background: #060e10;
+  transition: 0.2s ease;
+}
+
+.inner_form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 407px;
+  height: 429px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 613px;
+}
+
+.bottom-link {
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-box a {
+  color: #00bcd4;
+  text-decoration: none;
+}
 
 /*Nav Bar*/
 
@@ -70,7 +135,7 @@ body {
 
 .nav-btn2 {
   border: 0px;
-  /* background-color: black; */
+  background-color: black;
 }
 
 .bt {

@@ -140,9 +140,15 @@
 
         <section class="logsec">
             <div>
-                <h1 class="loga">
-                    Welcome <%= locals.name %>
-                </h1>
+                <% if (locals.name) { %>
+                    <h1 class="loga">
+                        Welcome <%= locals.name %>
+                    </h1>
+                    <% } else { %>
+                        <h1 class="loga">
+                            Please LogIn or Create account
+                        </h1>
+                        <% } %>
             </div>
         </section>
 
@@ -223,7 +229,8 @@
                         to its location, Georgia has been influenced by a variety of eastern and western civilizations,
                         resulting in a unique cultural heritage.
                     </p>
-                    <button class="sec3-btn"> <a href="https://en.wikipedia.org/wiki/Georgia_(country)">Read More</a></button>
+                    <button class="sec3-btn"> <a href="https://en.wikipedia.org/wiki/Georgia_(country)">Read
+                            More</a></button>
                 </div>
                 <div class="sec3-div3">
                     <iframe class="map"

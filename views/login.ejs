@@ -5,12 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link href="\styles\main.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="Signup_body">
+    <div class="form">
+        <div class="inner_form">
+            <h1 class="sign-h1">Log In</h1>
+            <form action="/login" method="post">
+                <div class="input_div I1">
+                    <input class="input" type="text" placeholder="Username" name="username">
+                </div>
+                <div class="input_div I3">
+                    <input class="input" type="password" placeholder="*******" name="password">
+                </div>
+                <button class="form_btn">login</button>
+            </form>
+            <div class="bottom-link form-box">
+                Already have an account?
+                <a href="/signup" id="signup-link">Signup</a>
+            </div>
+        </div>
+    </div>
 
+    <!-- 
 
-    <form action="/login" method="post">
         <label>Username :</label>
         <input type="text" placeholder="Username" name="username" required>
         <label>Password :</label>
@@ -20,7 +41,7 @@
     <div class="bottom-link">
         Don't have an account?
         <a href="/signup" id="signup-link">Signup</a>
-    </div>
+    </div> -->
 </body>
 
 </html>

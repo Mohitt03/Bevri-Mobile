@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -130,25 +132,35 @@
                         <li class="nav-item">
                             <a class="nav-link btn" href="#">Rewards</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/MyAccount" class="nav-link btn">
+                                <button class="nav-btn2 b"><img class="bt" src="images\user.png"
+                                        alt="search.img"></button></a>
+                        </li>
                     </ul>
                 </div>
-                <a href="/MyAccount">
-                    <button class="nav-btn2 b"><img class="bt" src="images\user.png" alt="search.img"></button></a>
+
 
             </nav>
         </section>
 
         <section class="logsec">
-            <div>
-                <% if (locals.name) { %>
-                    <h1 class="loga">
-                        Welcome <%= locals.name %>
-                    </h1>
-                    <% } else { %>
-                        <h1 class="loga">
-                            Please LogIn or Create account
-                        </h1>
-                        <% } %>
+            <div class="logdiv1">
+
+                <div class="logdiv3">
+
+
+                    <% if (locals.name) { %>
+                        <div class="log_else">
+                            <h1 class="logh1">Welcome <%= locals.name %>
+                            </h1>
+                            <button class="right-button"><a href="/Home" class="a">Log Out</a></button>
+                        </div>
+                        <% } else{ %>
+                            <button class="right-button"><a class="loga" href="/signup">Sign Up</a></button>
+                            <button class="right-button"><a class="loga" href="/login">Log In</a></button>
+                            <% } %>
+                </div>
             </div>
         </section>
 
@@ -229,8 +241,9 @@
                         to its location, Georgia has been influenced by a variety of eastern and western civilizations,
                         resulting in a unique cultural heritage.
                     </p>
-                    <button class="sec3-btn"> <a href="https://en.wikipedia.org/wiki/Georgia_(country)">Read
-                            More</a></button>
+                    <button class="sec3-btn"> <a href="https://en.wikipedia.org/wiki/Georgia_(country)" class="a">Read
+                            More
+                        </a></button>
                 </div>
                 <div class="sec3-div3">
                     <iframe class="map"
@@ -259,7 +272,7 @@
                             you
                             could only inherit them through the mists of time…" Oz Clarke
                         </p>
-                        <button class="sec4-btn">Shop Now</button>
+                        <button class="sec4-btn"><a href="/order" class="a">Shop Now</a></button>
                     </div>
 
 
@@ -275,8 +288,8 @@
                     <h1 class="sec5-heading2">We Deliver</h1>
                 </div>
                 <div class="sec5-div3">
-                    <button class="sec5-btn">Delivery</button>
-                    <button class="sec5-btn">Pickup</button>
+                    <button class="sec5-btn"><a href="/order" class="a">Delivery</a></button>
+                    <button class="sec5-btn"><a href="/pickup" class="a">Pickup</a></button>
                 </div>
             </div>
         </section>

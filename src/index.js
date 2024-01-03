@@ -30,7 +30,7 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-const API_URL = "http://localhost:2000"
+const API_URL = "http://localhost:5000"
 // const API_URL_USER = "http://localhost:2000"
 const ADMIN = "MOHIT0000";
 const ADMIN_KEY = "1511";
@@ -181,8 +181,13 @@ app.get("/Admin", (req, res) => {
   res.render("Admin.ejs")
 })
 
+app.get("/order", (req, res) => {
+  res.render("order.ejs")
+})
 
-
+app.get("/pickup", (req, res) => {
+  res.render("pickup.ejs")
+})
 
 //      ====-----==== Table Booking Section ====-----====
 

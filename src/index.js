@@ -7,6 +7,9 @@ express = require("express"),
 passportLocalMongoose = require("passport-local-mongoose")
 var session = require('express-session');
 
+
+// Models
+
 const Reservation = require("../models/Reservations");
 const User = require("../models/User");
 const Product = require("../models/Products");
@@ -14,6 +17,8 @@ const { text } = require("body-parser");
 var app = express();
 app.use(express.static("public"))
 
+
+// MongoDB Username Password 
 mongoose.connect("mongodb+srv://admin:1234@api.w1sen0x.mongodb.net/?retryWrites=true&w=majority");
 
 app.set('view engine', 'ejs');
@@ -34,19 +39,8 @@ const API_URL = "http://localhost:5000"
 // const API_URL_USER = "http://localhost:2000"
 const ADMIN = "MOHIT0000";
 const ADMIN_KEY = "1511";
-//      ====-----==== Search Function ====-----====
 
-app.get("/search/:key", async (req,res) =>{
-  let data = await Product.find(
-    {
-      "$or":[
-        {name:{$regex:req.params.key}},
-        {brief:{$regex:req.params.key}}
-      ]
-    }
-  )
-  res.send(data)
-})
+
 
 //      ====-----==== Login and Signup Section ====-----====
 
@@ -139,7 +133,7 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/Home", (req, res) => {
-  // const username = req.session.username;
+  const username = req.session.username;
   res.render("Home.ejs");
 });
 
@@ -188,6 +182,34 @@ app.get("/order", (req, res) => {
 app.get("/pickup", (req, res) => {
   res.render("pickup.ejs")
 })
+
+app.get("/seemore", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/SmallPlates/?key=123456789`);
+    const response1 = await axios.get(`${API_URL}/SoupsandSalads/?key=123456789`);
+    const response2 = await axios.get(`${API_URL}/Essentials/?key=123456789`);
+    const response3 = await axios.get(`${API_URL}/MeatandFish/?key=123456789`);
+    const response4 = await axios.get(`${API_URL}/SoftDrinks/?key=123456789`);
+    const response5 = await axios.get(`${API_URL}/Desserts/?key=123456789`);
+    const response6 = await axios.get(`${API_URL}/Wine/?key=123456789`);
+    // console.log(response);
+    res.render("seemore.ejs",
+      {
+        datas: response.data,
+        datas1: response1.data,
+        datas2: response2.data,
+        datas3: response3.data,
+        datas4: response4.data,
+        datas5: response5.data,
+        datas6: response6.data,
+      });
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+})
+
+
+
 
 //      ====-----==== Table Booking Section ====-----====
 
@@ -287,8 +309,10 @@ app.get("/products", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error });
   }
+
+
 });
-  
+
 app.get("/createproduct", (req, res) => {
   res.render("createproduct.ejs")
 });
@@ -298,11 +322,12 @@ app.post("/createproduct", async (req, res) => {
 
     const product = await Product.create({
       name: req.body.name,
+      type: req.bodyu.type,
       price: req.body.price,
       brief: req.body.brief,
       img: req.body.img,
-      img2: req.body.img2   
-      
+      img2: req.body.img2
+
     });
 
     res.redirect("/products");

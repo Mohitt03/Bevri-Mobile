@@ -5,6 +5,11 @@
     padding: 129px 0px;
 }
 
+.h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .form {
     text-align: center;
     padding: 30px 40px;
@@ -13,10 +18,11 @@
 
 .finput {
     padding: 10px;
+    margin-right: 5px;
     border: 2px solid gray;
-    border-bottom: none;
 }
-.flabel{
+
+.flabel {
     font-weight: 600;
     font-family: system-ui;
 
@@ -24,7 +30,6 @@
 
 .finput1 {
     padding: 10px;
-    margin-top: 12px;
 }
 
 .finput2 {
@@ -36,7 +41,7 @@
 }
 
 .finput4 {
-    padding: 10px 13px;
+    padding: 10px 37px;
 }
 
 .finput5 {
@@ -44,7 +49,7 @@
 }
 
 .finput6 {
-    padding: 10px 8px;
+    padding: 10px 23px;
     /* border-bottom: 2px solid gray; */
 }
 
@@ -60,4 +65,25 @@
     background-color: #101010c2;
     color: white;
     border: none;
+}
+
+.part1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.part3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }

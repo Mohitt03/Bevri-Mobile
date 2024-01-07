@@ -1,0 +1,56 @@
+body {
+    background-color: #f6fef1;
+}
+.second_main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+}
+
+.h3 {}
+
+.first {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 40%;
+    height: 25%;
+    overflow: hidden;
+    padding: 15px 10px;
+    margin: 10px 10px;
+    background-color: white;
+    border: 1px solid #c1c1c1c4;
+}
+
+.second {
+    width: 70%;
+    overflow: hidden;
+}
+
+.name {}
+
+.brief {
+    font-size: 14px;
+    height: 41px;
+    overflow: hidden;
+}
+
+.price {}
+
+.third {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 124px;
+    border-radius: 8%;
+}
+
+.simg {
+    width: 190px;
+    height: auto;
+}

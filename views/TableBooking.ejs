@@ -13,54 +13,99 @@
 
 
     <!-- Reservation Section -->
-    <% if (locals.avialaibility) { %>
-        <h1>No seat available</h1>
-        <% } %>
-
+    <div class="h1">
+        <% if (locals.avialaibility) { %>
+            <h1>No seat available</h1>
+            <% } %>
+    
+    </div>
+    
 
             <section class="formSec">
                 <div class="formdiv">
                     <form class="form" action="/TableBooking" method="post">
-                        
-                        
                         <label class="flabel">Make a Reservation</label><br>
-                        <select class="finput finput1" name="restaurant" required>
-                            <option>Select a restaurant</option>
-                            <option value="Bevri Los Altos">Bevri-Los Altos</option>
-                            <option value="Bevri Palo Alto">Bevri-Palo Alto</option>
-                        </select><br>
-                        <input class="finput finput2" type="date" id="my_hidden_input" name="date" ><br>
-                        <select class="finput finput3" name="time" required>
-                            <option>Timing</option>
-                            <option value="8:00am">8:00am</option>
-                            <option value="9:00am">9:00am</option>
-                            <option value="10:00am">10:00am</option>
-                            <option value="11:00am">11:00am</option>
-                        </select><br>
-                        <select class="finput finput4" name="people" required>
-                            <option>Number of people</option>
-                            <option value="2 people">2 people</option>
-                            <option value="3 people">3 people</option>
-                            <option value="4 people">4 people</option>
-                            <option value="5 people">5 people</option>
-                        </select><br>
-                        <select class="finput finput5" name="seat" required>
-                            <option>Seat Type</option>
-                            <option value="Standard">Standard ₹200</option>
-                            <option value="Premium">Premium ₹800</option>
-                        </select><br>
-                        <select class="finput finput6" name="ocassion">
-                            <option>Ocassion(optional)</option>
-                            <option value="Birthday">Birthday</option>
-                            <option value="Anniversary">Anniversary</option>
-                            <option value="Date Night">Date Night</option>
-                            <option value="Business Meal">Business Meal</option>
-                            <option value="Celebration">Celebration</option>
-                        </select><br>
-                        <input class="finput" type="text" placeholder="  Username" name="username" ><br>
-                        <input class="finput" type="tel" placeholder="  Phone no " name="number" ><br>
-                        <button class="fbtn" type="submit">Submit</button>
+                        <div class="part1">
 
+                            <select class="finput finput1" name="restaurant" required>
+                                <option>Select a restaurant</option>
+                                <option value="Bevri Los Altos">Bevri-Los Altos</option>
+                                <option value="Bevri Palo Alto">Bevri-Palo Alto</option>
+                            </select><br>
+                            <input class="finput finput2" type="date" id="my_hidden_input" name="date"><br>
+                            <select class="finput finput3" name="time" required>
+                                <option>Timing</option>
+                                <option value="11:00am">11:00am</option>
+                                <option value="11:30am">11:30am</option>
+                                <option value="12:00pm">12:00pm</option>
+                                <option value="12:30pm">12:30pm</option>
+                                <option value="01:00pm">01:00pm</option>
+                                <option value="01:30pm">01:30pm</option>
+                                <option value="02:00pm">02:00pm</option>
+                                <option value="02:30pm">02:30pm</option>
+                                <option value="03:00pm">03:00pm</option>
+                                <option value="03:30pm">03:30pm</option>
+                                <option value="04:00pm">04:00pm</option>
+                                <option value="04:30pm">04:30pm</option>
+                                <option value="05:00pm">05:00pm</option>
+                                <option value="05:30pm">05:30pm</option>
+                                <option value="06:00pm">06:00pm</option>
+                                <option value="06:30pm">06:30pm</option>
+                                <option value="07:00pm">07:00pm</option>
+                                <option value="07:30pm">07:30pm</option>
+                                <option value="08:00pm">08:00pm</option>
+                                <option value="08:30pm">08:30pm</option>
+                                <option value="09:00pm">09:00pm</option>
+                                <option value="09:30pm">09:30pm</option>
+                                <option value="10:00pm">10:00pm</option>
+                                <option value="10:30pm">10:30pm</option>
+                                <option value="11:00pm">11:00pm</option>
+                                <option value="11:30pm">11:30pm</option>
+                            </select><br>
+                        </div>
+                        <div class="part2">
+                            <select class="finput finput4" name="people" required>
+                                <option value="1 people">1 people</option>
+                                <option value="2 people">2 people</option>
+                                <option value="3 people">3 people</option>
+                                <option value="4 people">4 people</option>
+                                <option value="5 people">5 people</option>
+                                <option value="6 people">6 people</option>
+                                <option value="7 people">7 people</option>
+                                <option value="8 people">8 people</option>
+                                <option value="9 people">9 people</option>
+                                <option value="10 people">10 people</option>
+                                <option value="11 people">11 people</option>
+                                <option value="12 people">12 people</option>
+                                <option value="13 people">13 people</option>
+                                <option value="14 people">14 people</option>
+                                <option value="15 people">15 people</option>
+                                <option value="16 people">16 people</option>
+                                <option value="17 people">17 people</option>
+                                <option value="18 people">18 people</option>
+                                <option value="19 people">19 people</option>
+                                <option value="20 people">20 people</option>
+                            </select><br>
+                            <select class="finput finput5" name="seat" required>
+                                <option>Seat Type</option>
+                                <option value="Standard">Standard ₹200</option>
+                                <option value="Premium">Premium ₹800</option>
+                            </select><br>
+                            <select class="finput finput6" name="ocassion">
+                                <option>Ocassion</option>
+                                <option value="Birthday">Birthday</option>
+                                <option value="Anniversary">Anniversary</option>
+                                <option value="Date Night">Date Night</option>
+                                <option value="Business Meal">Business Meal</option>
+                                <option value="Celebration">Celebration</option>
+                            </select><br>
+                        </div>
+                        <div class="part3">
+                            <input class="finput" type="text" placeholder="  Username" name="username"><br>
+                            <input class="finput" type="tel" placeholder="  Phone no " name="number"><br>
+
+                        </div>
+                        <button class="fbtn" type="submit">Submit</button>
                     </form>
                 </div>
 

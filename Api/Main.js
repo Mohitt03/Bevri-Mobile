@@ -23,7 +23,7 @@ app.get('/Data', async (req, res) => {
     const userKey = (req.query.key)
     if (userKey === masterKey) {
         try {
-            const userData = await UserData.find({});
+            const userData = await UserData.find();
             res.status(200).json(userData);
         } catch (error) {
             res.status(500).json({ message: error.message })
@@ -173,7 +173,7 @@ app.put('/Udata/:id', async (req, res) => {
         const loginData = await LoginData.findByIdAndUpdate(id, req.body);
         // we cannot find any product in database
         if (!loginData) {
-            return res.status(404).json({ message: `cannot find any product with ID ${id}` })
+            return res.status(404).json({ message: `cannot find ${id}` })
         }
         const updatedloginData = await LoginData.findById(id);
         res.status(200).json(updatedloginData);
@@ -189,20 +189,20 @@ app.put('/Udata/:id', async (req, res) => {
 app.delete('/Udata/:id', async (req, res) => {
 
 
-        try {
-            const userKey = (req.query.key)
-            const { id } = req.params;
-            const loginData = await LoginData.findByIdAndDelete(id);
-            if (!loginData) {
-                return res.status(404).json({ message: `cannot find any Parking Data with ID ${id}` })
-            }
-            res.status(200).json(loginData);
+    try {
+        const userKey = (req.query.key)
+        const { id } = req.params;
+        const loginData = await LoginData.findByIdAndDelete(id);
+        if (!loginData) {
+            return res.status(404).json({ message: `cannot find any Parking Data with ID ${id}` })
+        }
+        res.status(200).json(loginData);
 
-        }
-        catch (error) {
-            res.status(500).json({ message: error.message })
-        }
-    })
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
 
 
 
@@ -231,6 +231,108 @@ app.get('/Pdata', async (req, res) => {
             .json({ error: "You are not authorized" })
     }
 
+})
+app.get('/SmallPlates', async (req, res) => {
+    try {
+        const productsData = await ProductsData.find(
+            {
+                "$or": [
+                    { type: { $regex: "Small Plates" } }
+                ]
+            });
+        res.status(200).json(productsData);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+
+app.get('/SoupsandSalads', async (req, res) => {
+    try {
+        const productsData = await ProductsData.find(
+            {
+                "$or": [
+                    { type: { $regex: "Soups and Salads" } }
+                ]
+            });
+        res.status(200).json(productsData);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+
+app.get('/Essentials', async (req, res) => {
+    try {
+        const productsData = await ProductsData.find(
+            {
+                "$or": [
+                    { type: { $regex: "Essentials" } }
+                ]
+            });
+        res.status(200).json(productsData);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+
+app.get('/MeatandFish', async (req, res) => {
+    try {
+        const productsData = await ProductsData.find(
+            {
+                "$or": [
+                    { type: { $regex: "Meat and Fish" } }
+                ]
+            });
+        res.status(200).json(productsData);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+
+app.get('/SoftDrinks', async (req, res) => {
+    try {
+        const productsData = await ProductsData.find(
+            {
+                "$or": [
+                    { type: { $regex: "Soft Drinks" } }
+                ]
+            });
+        res.status(200).json(productsData);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+
+app.get('/Desserts', async (req, res) => {
+    try {
+        const productsData = await ProductsData.find(
+            {
+                "$or": [
+                    { type: { $regex: "Desserts" } }
+                ]
+            });
+        res.status(200).json(productsData);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+app.get('/Wine', async (req, res) => {
+    try {
+        const productsData = await ProductsData.find(
+            {
+                "$or": [
+                    { type: { $regex: "Wine" } }
+                ]
+            });
+        res.status(200).json(productsData);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
 })
 
 app.get('/Pdata/:id', async (req, res) => {

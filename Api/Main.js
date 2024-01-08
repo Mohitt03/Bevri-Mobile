@@ -16,6 +16,20 @@ app.use(express.urlencoded({ extended: false }))
 
 // Reservation Data
 
+app.get('/TableBookingComplete', async (req, res) => {
+    try {
+        const userData = await  UserData.find(
+            {
+                "$or": [
+                    { username: { $regex: "Mohit" } }
+                ]
+            });
+        res.status(200).json(userData);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
 
 
 

@@ -8,7 +8,7 @@ var Reservation = new Schema({
     number: {
         type: Number
     },
-    restaurant: {
+    restaurant: {   
         type: String
     },
     date: {

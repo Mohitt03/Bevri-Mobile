@@ -53,14 +53,27 @@ app.get("/signup", function (req, res) {
 
 // Handling user registration
 app.post("/signup", async (req, res) => {
-  const user = await User.create({
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password
-  });
 
-  return res.render("login");
+
+
+  // check if the Reservation, date and time exists
+  const UserName = await User.findOne({ username: req.body.username });
+  if (UserName) {
+
+    return res.render("signup", { avialaibility: "Username or email already exists" })
+
+  }
+  else {
+    const user = await User.create({
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password
+    });
+
+    return res.render("login");
+  }
 });
+
 
 //Showing login form
 app.get("/login", function (req, res) {
@@ -167,9 +180,18 @@ app.get("/TableBooking2", (req, res) => {
 })
 
 
-app.get("/TableBookingComplete", (req, res) => {
-  res.render("TableBookingComplete.ejs")
-})
+// app.get("/TableBookingComplete", async (req, res) => {
+
+//   const reservation = await Reservation.create({
+//     username: "MOhit",
+//     number: "1234567898",
+//     restaurant: "Bevri los altos",
+//     date: "12/1/2023",
+//     people: "2",
+//     seat: "Standard"
+//   });
+//   res.render("TableBookingComplete.ejs",{reservation})
+// })
 
 app.get("/Admin", (req, res) => {
   res.render("Admin.ejs")
@@ -237,7 +259,7 @@ app.post("/TableBooking", async (req, res) => {
         seat: req.body.seat,
         ocassion: req.body.ocassion,
       });
-      res.render("TableBookingComplete.ejs")
+      res.render("TableBookingComplete.ejs",{reservation})
 
     }
   } catch (error) {

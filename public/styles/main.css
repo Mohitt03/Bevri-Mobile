@@ -275,7 +275,14 @@ body a {
   border-radius: 8px;
   font-size: 13px;
 }
-.log-div3{
+
+.logdiv1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-div3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -643,16 +650,19 @@ Enrty ====> screen
 }
 
 @media (max-width:991px) {
+
   /* navbar section */
   .navbar {
     width: 90%;
   }
+
   .head-img {
     margin-right: 15rem;
-}
-.navbar-nav {
-  gap: 10px;
-}
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
 
   .sec1-div3 {
     position: relative;
@@ -684,10 +694,10 @@ Enrty ====> screen
   }
 
 
-    /* Paralayx Section */
+  /* Paralayx Section */
 
-    .parallax-1 {
-      height: 500px;
+  .parallax-1 {
+    height: 500px;
   }
 
   .parallax-1 {
@@ -785,7 +795,7 @@ Enrty ====> screen
 
   .parallax-1 {
     height: 400px;
-}
+  }
 
   /* Section 3 */
 
@@ -861,7 +871,7 @@ Enrty ====> screen
 
   .parallax-1 {
     height: 300px;
-}
+  }
 
 
   .right-h1 {
@@ -915,5 +925,3 @@ Enrty ====> screen
     margin-right: 10rem;
   }
 }
-
-

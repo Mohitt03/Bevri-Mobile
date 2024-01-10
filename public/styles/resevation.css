@@ -174,13 +174,21 @@ header .navbar {
 
 
 
-
+.Rsec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
 
 .Rsec1 {
     margin-top: 20px;
 }
-
+.Rsec_map{
+    overflow: hidden;
+    height: 390px;
+}
 .Rsec1-div2 {
     display: flex;
     flex-direction: column;
@@ -198,7 +206,12 @@ header .navbar {
     padding-bottom: 4rem;
 }
 
-@media (max-width:767px) {}
+@media (max-width:680px) {
+    .Rsec {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+}
 
 @media (max-width: 575px) {
 

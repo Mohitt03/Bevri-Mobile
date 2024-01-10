@@ -19,6 +19,7 @@ header .navbar {
     align-items: center;
     width: 40%;
     justify-content: center;
+    padding: 0px 0px 0px 53px;
 }
 
 .navbar-div2 {
@@ -384,6 +385,7 @@ header .navbar {
 
     filter: brightness(0.8);
 }
+
 .inner-img:hover {
     opacity: 0.8;
     transition: all 0.555s;
@@ -443,7 +445,8 @@ header .navbar {
     width: 374px;
     height: auto;
 }
-.a{
+
+.a {
     text-decoration: none;
     color: white;
 }
@@ -678,6 +681,12 @@ hr {
 
 
 @media screen and (max-width: 900px) {
+
+    /* Navbar */
+    .navbar-div1 {
+        padding: 0px 0px 0px 0px;
+    }
+
     .div-img {
         width: 50%;
         justify-content: flex-start;
@@ -759,7 +768,7 @@ hr {
 
     /* Section 6 */
 
-    .sec6{
+    .sec6 {
         height: 160px;
     }
 
@@ -767,10 +776,12 @@ hr {
         flex-direction: column;
         margin-left: 0px;
     }
+
     .sec6-div2 {
         width: 100%;
         justify-content: center;
     }
+
     .sec6-div3 {
         width: 100%;
         justify-content: center;
@@ -880,14 +891,14 @@ hr {
 
     .div-img2 {
         justify-content: center;
-      }
-    
-      .ul {
+    }
+
+    .ul {
         flex-direction: column;
         gap: 20px;
-      }
-    
-      .li2 {
+    }
+
+    .li2 {
         text-align: center;
-      }
+    }
 }

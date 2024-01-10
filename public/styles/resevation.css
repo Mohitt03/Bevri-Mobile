@@ -20,7 +20,8 @@ header {
     padding: 10px;
     transition: all 0.7s;
 }
-.Ra:hover{
+
+.Ra:hover {
     background-color: black;
     color: white;
 }
@@ -28,6 +29,8 @@ header {
 
 
 header .navbar {
+    display: flex;
+    justify-content: center;
     max-width: 752px;
     margin: 0 auto;
 }
@@ -177,29 +180,32 @@ header .navbar {
 .Rsec1 {
     margin-top: 20px;
 }
-.Rsec1-div2{
+
+.Rsec1-div2 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.Rsec1-head1{
+
+.Rsec1-head1 {
     font-size: xxx-large;
     font-weight: 700;
 }
-.Rsec1-img1{
+
+.Rsec1-img1 {
     width: 600px;
     height: auto;
     padding-bottom: 4rem;
 }
 
-@media (max-width:767px) {
+@media (max-width:767px) {}
 
-}
-@media (max-width: 575px){
+@media (max-width: 575px) {
 
     .Rsec1-head1 {
         font-size: x-large;
     }
+
     .Rsec1-img1 {
         width: 322px;
     }

@@ -103,8 +103,10 @@ body a {
 
 .navbar {
   display: flex;
+  gap: 30px;
   justify-content: center;
   background-color: black;
+  margin: 20px 0px 30px 0px;
 }
 
 .btn {
@@ -263,13 +265,20 @@ body a {
   color: white;
 }
 
-.logdiv3 button {
+
+
+.logdiv1 button {
   display: inline;
   margin-left: 5px;
   width: 66px;
   height: 29px;
   border-radius: 8px;
   font-size: 13px;
+}
+.log-div3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logh1 {
@@ -640,6 +649,9 @@ Enrty ====> screen
   }
   .head-img {
     margin-right: 15rem;
+}
+.navbar-nav {
+  gap: 10px;
 }
 
   .sec1-div3 {

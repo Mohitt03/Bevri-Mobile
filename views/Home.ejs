@@ -105,8 +105,9 @@
 
         <section class="head ">
             <nav class="navbar navbar-expand-lg navbar-dark ">
-
-                <img src="images\Bevri Logo Small Transparent.png" class="head-img">
+                <div>
+                    <img src="images\Bevri Logo Small Transparent.png" class="head-img">
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -122,6 +123,26 @@
                         <li class="nav-item">
                             <a class="nav-link btn" href="/groups">Groups</a>
                         </li>
+                        <div class="logdiv1">
+                            <% if (locals.name) { %>
+                                <li>
+                                    <div class="log-div3">
+                                        <h1 class="logh1">Welcome <%= locals.name %>
+                                        </h1>
+                                        <button class="right-button"><a href="/Home" class="a">Log Out</a></button>
+                                    </div>
+                                </li>
+                                <% } else{ %>
+                                    <li>
+                                        <div class="log-div3">
+                                            <button class="right-button"><a class="loga" href="/signup">Sign
+                                                    Up</a></button>
+                                            <button class="right-button"><a class="loga" href="/login">Log
+                                                    In</a></button>
+                                        </div>
+                                    </li>
+                                    <% } %>
+                        </div>
                         <!-- <li class="nav-item">
                             <a class="nav-link btn" href="#">Catering</a>
                         </li>
@@ -135,28 +156,16 @@
                 </div>
 
 
+
             </nav>
         </section>
 
-        <section class="logsec">
+        <!-- <section class="logsec">
             <div class="logdiv1">
 
-                <div class="logdiv3">
 
-
-                    <% if (locals.name) { %>
-                        <div class="log_else">
-                            <h1 class="logh1">Welcome <%= locals.name %>
-                            </h1>
-                            <button class="right-button"><a href="/Home" class="a">Log Out</a></button>
-                        </div>
-                        <% } else{ %>
-                            <button class="right-button"><a class="loga" href="/signup">Sign Up</a></button>
-                            <button class="right-button"><a class="loga" href="/login">Log In</a></button>
-                            <% } %>
-                </div>
             </div>
-        </section>
+        </section> -->
 
         <!--Section 1-->
         <section class="First-Slide sec1">

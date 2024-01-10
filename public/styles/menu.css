@@ -458,6 +458,7 @@ header .navbar {
     /* height: 310px; */
     height: 100%;
     /* background-color: #6f9730; */
+    margin-top: 40px;
 }
 
 .sec5-div1 {
@@ -469,8 +470,8 @@ header .navbar {
 
 .sec5-div {
     display: flex;
-    width: 50%;
-    justify-content: flex-end;
+    /* width: 50%; */
+    /* justify-content: flex-end; */
     align-items: center;
 }
 
@@ -873,4 +874,20 @@ hr {
         overflow: hidden;
         width: 67%;
     }
+
+
+
+
+    .div-img2 {
+        justify-content: center;
+      }
+    
+      .ul {
+        flex-direction: column;
+        gap: 20px;
+      }
+    
+      .li2 {
+        text-align: center;
+      }
 }

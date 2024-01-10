@@ -7,7 +7,7 @@ body {
   overflow-x: hidden;
 }
 
-body a{
+body a {
   text-decoration: none;
 }
 
@@ -262,7 +262,8 @@ body a{
   text-decoration: none;
   color: white;
 }
-.logdiv3 button{
+
+.logdiv3 button {
   display: inline;
   margin-left: 5px;
   width: 66px;
@@ -270,12 +271,14 @@ body a{
   border-radius: 8px;
   font-size: 13px;
 }
-.logh1{
+
+.logh1 {
   color: #6F9730;
   font-family: 'Satisfy', cursive;
   margin-right: 28px;
 }
-.log_else{
+
+.log_else {
   display: flex;
   align-items: center;
 }
@@ -631,9 +634,13 @@ Enrty ====> screen
 }
 
 @media (max-width:991px) {
+  /* navbar section */
   .navbar {
     width: 90%;
   }
+  .head-img {
+    margin-right: 15rem;
+}
 
   .sec1-div3 {
     position: relative;
@@ -664,9 +671,18 @@ Enrty ====> screen
     ;
   }
 
+
+    /* Paralayx Section */
+
+    .parallax-1 {
+      height: 500px;
+  }
+
   .parallax-1 {
     background-size: 900px auto;
   }
+
+
 
   /* Section 3 Part 1 */
 
@@ -749,10 +765,15 @@ Enrty ====> screen
     width: 254px;
     height: 291px;
   }
+
 }
 
 @media (max-width:767px) {
+  /* Paralayx Section */
 
+  .parallax-1 {
+    height: 400px;
+}
 
   /* Section 3 */
 
@@ -824,6 +845,13 @@ Enrty ====> screen
 }
 
 @media (max-width:565px) {
+  /* Paralayx Section */
+
+  .parallax-1 {
+    height: 300px;
+}
+
+
   .right-h1 {
     width: 270px;
 
@@ -834,9 +862,10 @@ Enrty ====> screen
   }
 
   /* Section 5 */
-  .sec5{
+  .sec5 {
     background-size: 180% 100%;
   }
+
   .sec5-heading1 {
     font-size: 30px;
   }
@@ -845,3 +874,34 @@ Enrty ====> screen
     font-size: 60px;
   }
 }
+
+@media (max-width:495px) {
+  /* Navbar section */
+
+  .head-img {
+    margin-right: 12rem;
+  }
+
+
+  /* Footer section */
+  .div-img2 {
+    justify-content: center;
+  }
+
+  .ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .li2 {
+    text-align: center;
+  }
+}
+
+@media (max-width:340px) {
+  .head-img {
+    margin-right: 10rem;
+  }
+}
+
+

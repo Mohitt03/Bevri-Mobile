@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.get('/TableBookingComplete', async (req, res) => {
     try {
-        const userData = await  UserData.find(
+        const userData = await UserData.find(
             {
                 "$or": [
                     { username: { $regex: "Mohit" } }
@@ -372,19 +372,24 @@ app.post('/Pdata', async (req, res) => {
 })
 
 // update a Data
-app.put('/Pdata/:id', async (req, res) => {
+app.patch('/Pdata/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const productsData = await ProductsData.findByIdAndUpdate(id, req.body);
+        const productsData = await ProductsData.find(id, req.body);
         // we cannot find any product in database
         if (!productsData) {
             return res.status(404).json({ message: `cannot find any product with ID ${id}` })
         }
-        const updatedloginData = await ProductsData.findById(id);
-        res.status(200).json(updatedloginData);
-        productsData
+        if (req.body.name) post.name = req.body.name;
+        if (req.body.type) post.type = req.body.type;
+        if (req.body.price) post.price = req.body.price;
+        if (req.body.brief) post.brief = req.body.brief;
+        if (req.body.img) post.img = req.body.img;
+        if (req.body.img2) post.img2 = req.body.img2;
+
+        res.status(200).json(productsData);
     } catch (error) {
-        res.status(500).json({ message: error.message })
+        res.status(500).json({ message: "Server error" })
     }
 })
 
@@ -394,7 +399,6 @@ app.put('/Pdata/:id', async (req, res) => {
 app.delete('/Pdata/:id', async (req, res) => {
     const userKey = (req.query.key)
     if (userKey === masterKey) {
-
         try {
             const userKey = (req.query.key)
             const { id } = req.params;
@@ -403,7 +407,6 @@ app.delete('/Pdata/:id', async (req, res) => {
                 return res.status(404).json({ message: `cannot find any Parking Data with ID ${id}` })
             }
             res.status(200).json(productsData);
-
         }
         catch (error) {
             res.status(500).json({ message: error.message })

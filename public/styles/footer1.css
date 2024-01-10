@@ -141,3 +141,19 @@
 hr {
     width: 60%;
 }
+
+
+@media (max-width:495px) {
+    .div-img2 {
+      justify-content: center;
+    }
+  
+    .ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .li2 {
+      text-align: center;
+    }
+  }

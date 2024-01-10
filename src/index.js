@@ -259,7 +259,7 @@ app.post("/TableBooking", async (req, res) => {
         seat: req.body.seat,
         ocassion: req.body.ocassion,
       });
-      res.render("TableBookingComplete.ejs",{reservation})
+      res.render("TableBookingComplete.ejs", { reservation })
 
     }
   } catch (error) {
@@ -331,17 +331,13 @@ app.get("/products", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error });
   }
-
-
 });
 
 app.get("/createproduct", (req, res) => {
   res.render("createproduct.ejs")
 });
 app.post("/createproduct", async (req, res) => {
-
   try {
-
     const product = await Product.create({
       name: req.body.name,
       type: req.bodyu.type,
@@ -349,17 +345,36 @@ app.post("/createproduct", async (req, res) => {
       brief: req.body.brief,
       img: req.body.img,
       img2: req.body.img2
-
     });
-
     res.redirect("/products");
-
   } catch (error) {
     console.log(error.message);
   }
 
 
 })
+
+// Partially update a post
+
+app.get("/edit/:id", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/Pdata/${req.params.id}`);
+    console.log(response.data);
+    res.render("createproduct.ejs", { post: response.data, });
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching post" });
+  }
+});
+
+app.post("/api/Pdata/:id", async (req, res) => {
+  try {
+    const response = await axios.patch(`${API_URL}/Pdata/${req.params.id}/?key=123456789`, req.body);
+    console.log(response.data);
+    res.redirect("/products");
+  } catch (error) {
+    res.status(500).json({ message: "Error updating post" });
+  }
+});
 
 app.get("/api/Pdata/delete/:id", async (req, res) => {
   try {

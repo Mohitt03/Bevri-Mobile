@@ -1,6 +1,7 @@
 body {
     background-color: #f6fef1;
 }
+
 .second_main {
     margin-top: 20px;
     display: flex;
@@ -14,9 +15,10 @@ body {
 
 .first {
     display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    width: 40%;
+    /* align-items: center; */
+    justify-content: center;
+    /* width: 40%; */
+    max-width: 556px;
     height: 25%;
     overflow: hidden;
     padding: 15px 10px;
@@ -26,7 +28,7 @@ body {
 }
 
 .second {
-    width: 70%;
+    width: 390px;
     overflow: hidden;
 }
 
@@ -45,12 +47,40 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 140px;
+    width: 130px;
     height: 124px;
     border-radius: 8%;
+    margin-left: 15px;
 }
 
 .simg {
     width: 190px;
     height: auto;
+}
+
+@media (max-width:650px) {
+    .first {
+        max-width: 435px;
+    }
+
+    .second {
+        width: 270px;
+    }
+}
+
+@media (max-width:425px) {
+    .first {
+        max-width: 384px;
+    }
+
+    .second {
+        width: 217px;
+    }
+}
+
+@media (max-width:480px) {
+    .first {
+        align-items: center;
+        flex-direction: column;
+    }
 }

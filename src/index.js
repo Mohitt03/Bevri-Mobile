@@ -326,7 +326,7 @@ app.get("/api/Udata/delete/:id", async (req, res) => {
 app.get("/products", async (req, res) => {
   try {
     const response = await axios.get(`${API_URL}/Pdata/?key=123456789`);
-    console.log(response);
+    // console.log(response);
     res.render("product.ejs", { datas: response.data });
   } catch (error) {
     res.status(500).json({ error: error });
@@ -334,24 +334,32 @@ app.get("/products", async (req, res) => {
 });
 
 app.get("/createproduct", (req, res) => {
-  res.render("createproduct.ejs")
+  res.render("createproduct.ejs", {
+    heading: "New Post",
+    submit: "Create Post",
+  })
 });
-app.post("/createproduct", async (req, res) => {
+app.post("/Pdata", async (req, res) => {
+  // try {
+  //   const product = await Product.create({
+  //     name: req.body.name,
+  //     type: req.bodyu.type,
+  //     price: req.body.price,
+  //     brief: req.body.brief,
+  //     img: req.body.img,
+  //     img2: req.body.img2
+  //   });
+  //   res.redirect("/products");
+  // } catch (error) {
+  //   console.log(error.message);
+  // }
   try {
-    const product = await Product.create({
-      name: req.body.name,
-      type: req.bodyu.type,
-      price: req.body.price,
-      brief: req.body.brief,
-      img: req.body.img,
-      img2: req.body.img2
-    });
+    const response = await axios.post(`${API_URL}/Pdata`, req.body);
+    console.log(response.data);
     res.redirect("/products");
   } catch (error) {
-    console.log(error.message);
+    res.status(500).json({ message: "Error creating post" });
   }
-
-
 })
 
 // Partially update a post
@@ -360,15 +368,20 @@ app.get("/edit/:id", async (req, res) => {
   try {
     const response = await axios.get(`${API_URL}/Pdata/${req.params.id}`);
     console.log(response.data);
-    res.render("createproduct.ejs", { post: response.data, });
+    res.render("createproduct.ejs", {
+      heading: "Edit Post",
+      submit: "Update Post",
+      post: response.data,
+    });
   } catch (error) {
     res.status(500).json({ message: "Error fetching post" });
-  }
+  } 
 });
 
 app.post("/api/Pdata/:id", async (req, res) => {
+  console.log("called");
   try {
-    const response = await axios.patch(`${API_URL}/Pdata/${req.params.id}/?key=123456789`, req.body);
+    const response = await axios.patch(`${API_URL}/Pdata/${req.params.id}`, req.body);
     console.log(response.data);
     res.redirect("/products");
   } catch (error) {

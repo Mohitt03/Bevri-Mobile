@@ -4,16 +4,13 @@ const passportLocalMongoose = require('passport-local-mongoose');
 var Products = new Schema({
 
     name: {
-        type: String,
-        required: true
+        type: String
     },
     type: {
-        type: String,
-        required: true
+        type: String
     },
     price: {
-        type: Number,
-        required: true
+        type: Number
     },
     brief: {
         type: String,

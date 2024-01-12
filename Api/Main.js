@@ -361,13 +361,27 @@ app.get('/Pdata/:id', async (req, res) => {
 
 
 app.post('/Pdata', async (req, res) => {
-    try {
-        const productsData = await ProductsData.create(req.body)
-        res.status(200).json(ProductsData);
+    // try {
+    //     const productsData = await ProductsData.create(req.body)
+    //     res.status(200).json(ProductsData);
 
+    // } catch (error) {
+    //     console.log(error.message);
+    //     res.status(500).json({ message: error.message })
+    // }
+    try {
+        const product = await ProductsData.create({
+            name: req.body.name,
+            type: req.body.type,
+            price: req.body.price,
+            brief: req.body.brief,
+            img: req.body.img,
+            img2: req.body.img2
+        });
+        // res.redirect("/products");
+        res.status(201).json(product);
     } catch (error) {
         console.log(error.message);
-        res.status(500).json({ message: error.message })
     }
 })
 
@@ -375,19 +389,19 @@ app.post('/Pdata', async (req, res) => {
 app.patch('/Pdata/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const productsData = await ProductsData.find(id, req.body);
+        const productsData = await ProductsData.findByIdAndUpdate(id, req.body);
         // we cannot find any product in database
-        if (!productsData) {
-            return res.status(404).json({ message: `cannot find any product with ID ${id}` })
-        }
-        if (req.body.name) post.name = req.body.name;
-        if (req.body.type) post.type = req.body.type;
-        if (req.body.price) post.price = req.body.price;
-        if (req.body.brief) post.brief = req.body.brief;
-        if (req.body.img) post.img = req.body.img;
-        if (req.body.img2) post.img2 = req.body.img2;
+        if (!productsData) return res.status(404).json({ message: `cannot find any product with ID ${id}` })
 
-        res.status(200).json(productsData);
+        if (req.body.name) productsData.name = req.body.name;
+        if (req.body.type) productsData.type = req.body.type;
+        if (req.body.price) productsData.price = req.body.price;
+        if (req.body.brief) productsData.brief = req.body.brief;
+        if (req.body.img) productsData.img = req.body.img;
+        if (req.body.img2) productsData.img2 = req.body.img2;
+
+        res.status(200).json(productsData); 
+
     } catch (error) {
         res.status(500).json({ message: "Server error" })
     }

@@ -279,7 +279,7 @@ body a {
 .logdiv1 {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
 }
 
 .log-div3 {
@@ -865,6 +865,9 @@ Enrty ====> screen
     height: 291px;
   }
 }
+
+
+
 
 @media (max-width:565px) {
   /* Paralayx Section */

@@ -175,9 +175,6 @@ app.get("/TableBooking", (req, res) => {
   res.render("TableBooking.ejs")
 })
 
-app.get("/TableBooking2", (req, res) => {
-  res.render("TableBooking2.ejs")
-})
 
 
 // app.get("/TableBookingComplete", async (req, res) => {

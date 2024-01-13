@@ -145,7 +145,7 @@ app.get("/login", (req, res) => {
   res.render("login.ejs");
 });
 
-app.get("/Home", (req, res) => {
+app.get("/", (req, res) => {
   const username = req.session.username;
   res.render("Home.ejs");
 });

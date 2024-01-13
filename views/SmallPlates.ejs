@@ -1,0 +1,34 @@
+<%- include("partials/header") %>
+
+    <link href="/styles/seeMore.css" rel="stylesheet">
+    <div class="main">
+        <div class="second_main">
+            <h3 class="shead">Small Plates</h3>
+            <% datas.forEach(data=> { %>
+                <div class="first">
+                    <div class="second">
+                        <p class="name">
+                            <%= data.name %>
+                        </p>
+                        <p class="brief">
+                            <%= data.brief %>
+                        </p>
+                        <p class="price">
+                            <%= data.price %>US$.00
+                        </p>
+
+                    </div>
+                    <% if (data.img) { var img=data.img }else{ var img="/images/Bevri Logo Small Transparent.png " } %>
+                        <div class="third">
+                            <img class="simg" src="<%= img %>">
+                        </div>
+                </div>
+
+                <% }); %>
+        </div>
+
+
+
+    </div>
+
+    <%- include("partials/footer") %>

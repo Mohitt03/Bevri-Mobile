@@ -1,0 +1,26 @@
+#sec-wrong {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wr-h1 {
+    font-size: xxx-large;
+    color: #6f9730;
+    font-family: cursive;    
+}
+
+.excl{
+    color: orange;
+}
+
+.wr-h3 {
+    font-size: xx-large;
+    font-family: cursive;
+}
+
+.wr-h4{
+    font-family: cursive;
+    color: orange;
+}

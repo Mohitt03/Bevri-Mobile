@@ -6,6 +6,15 @@ header {
     background-color: #000;
 }
 
+.Rsec-rese {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
 /* Reservation */
 
 .Rsec {
@@ -174,7 +183,7 @@ header .navbar {
 
 
 
-.Rsec{
+.Rsec {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,10 +194,12 @@ header .navbar {
 .Rsec1 {
     margin-top: 20px;
 }
-.Rsec_map{
+
+.Rsec_map {
     overflow: hidden;
     height: 390px;
 }
+
 .Rsec1-div2 {
     display: flex;
     flex-direction: column;
@@ -207,13 +218,23 @@ header .navbar {
 }
 
 @media (max-width:680px) {
-    .Rsec {
+    .Rsec-rese {
         flex-direction: column-reverse;
         gap: 40px;
+    }
+
+    .iframe {
+        width: 400px;
+        height: 400px;
     }
 }
 
 @media (max-width: 575px) {
+
+    .iframe {
+        width: 300px;
+        height: 400px;
+    }
 
     .Rsec1-head1 {
         font-size: x-large;
@@ -222,4 +243,5 @@ header .navbar {
     .Rsec1-img1 {
         width: 322px;
     }
+
 }

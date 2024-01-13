@@ -18,23 +18,20 @@
                         </p>
 
                     </div>
-                    <% if (data.img) { 
-                        var img = data.img
-                     }else{
-                        var img = "/images/Bevri Logo Small Transparent.png "
-                     } %>
-                    <div class="third">
-                        <img class="simg" src="<%= img %>">
-                    </div>
+                    <% if (data.img) { var img=data.img }else{ var img="/images/Bevri Logo Small Transparent.png " } %>
+                        <div class="third">
+                            <img class="simg" src="<%= img %>">
+                        </div>
                 </div>
 
                 <% }); %>
         </div>
 
 
+
         <div class="second_main">
             <h3 class="shead">Soups and Salads</h3>
-            <% datas1.forEach(data=> { %>
+            <% datas.forEach(data=> { %>
                 <div class="first">
                     <div class="second">
                         <p class="name">
@@ -46,14 +43,10 @@
                         <p class="price">US$<%= data.price %>.00 </p>
 
                     </div>
-                    <% if (data.img) { 
-                        var img = data.img
-                     }else{
-                        var img = "/images/Bevri Logo Small Transparent.png "
-                     } %>
-                    <div class="third">
-                        <img class="simg" src="<%= img %>">
-                    </div>
+                    <% if (data.img) { var img=data.img }else{ var img="/images/Bevri Logo Small Transparent.png " } %>
+                        <div class="third">
+                            <img class="simg" src="<%= img %>">
+                        </div>
                 </div>
 
                 <% }); %>
@@ -61,7 +54,7 @@
 
         <div class="second_main">
             <h3 class="shead">Essentials</h3>
-            <% datas2.forEach(data=> { %>
+            <% datas.forEach(data=> { %>
                 <div class="first">
                     <div class="second">
                         <p class="name">
@@ -73,23 +66,18 @@
                         <p class="price">US$<%= data.price %>.00 </p>
 
                     </div>
-                    <% if (data.img) { 
-                        var img = data.img
-                     }else{
-                        var img = "/images/Bevri Logo Small Transparent.png "
-                     } %>
-                    <div class="third">
-                        <img class="simg" src="<%= img %>">
-                    </div>
+                    <% if (data.img) { var img=data.img }else{ var img="/images/Bevri Logo Small Transparent.png " } %>
+                        <div class="third">
+                            <img class="simg" src="<%= img %>">
+                        </div>
                 </div>
 
                 <% }); %>
         </div>
 
-
         <div class="second_main">
             <h3 class="shead">Meat and Fish</h3>
-            <% datas3.forEach(data=> { %>
+            <% datas.forEach(data=> { %>
                 <div class="first">
                     <div class="second">
                         <p class="name">
@@ -101,14 +89,10 @@
                         <p class="price">US$<%= data.price %>.00 </p>
 
                     </div>
-                    <% if (data.img) { 
-                        var img = data.img
-                     }else{
-                        var img = "/images/Bevri Logo Small Transparent.png "
-                     } %>
-                    <div class="third">
-                        <img class="simg" src="<%= img %>">
-                    </div>
+                    <% if (data.img) { var img=data.img }else{ var img="/images/Bevri Logo Small Transparent.png " } %>
+                        <div class="third">
+                            <img class="simg" src="<%= img %>">
+                        </div>
                 </div>
 
                 <% }); %>
@@ -116,7 +100,7 @@
 
         <div class="second_main">
             <h3 class="shead">Soft Drinks</h3>
-            <% datas4.forEach(data=> { %>
+            <% datas.forEach(data=> { %>
                 <div class="first">
                     <div class="second">
                         <p class="name">
@@ -128,24 +112,19 @@
                         <p class="price">US$<%= data.price %>.00 </p>
 
                     </div>
-                    <% if (data.img) { 
-                        var img = data.img
-                     }else{
-                        var img = "/images/Bevri Logo Small Transparent.png "
-                     } %>
-                    <div class="third">
-                        <img class="simg" src="<%= img %>">
-                    </div>
+                    <% if (data.img) { var img=data.img }else{ var img="/images/Bevri Logo Small Transparent.png " } %>
+                        <div class="third">
+                            <img class="simg" src="<%= img %>">
+                        </div>
                 </div>
 
                 <% }); %>
+
         </div>
-
-
 
         <div class="second_main">
             <h3 class="sname">Desserts</h3>
-            <% datas5.forEach(data=> { %>
+            <% datas.forEach(data=> { %>
                 <div class="first">
                     <div class="second">
                         <p class="name">
@@ -157,14 +136,10 @@
                         <p class="price">US$<%= data.price %>.00 </p>
 
                     </div>
-                    <% if (data.img) { 
-                        var img = data.img
-                     }else{
-                        var img = "/images/Bevri Logo Small Transparent.png "
-                     } %>
-                    <div class="third">
-                        <img class="simg" src="<%= img %>">
-                    </div>
+                    <% if (data.img) { var img=data.img }else{ var img="/images/Bevri Logo Small Transparent.png " } %>
+                        <div class="third">
+                            <img class="simg" src="<%= img %>">
+                        </div>
                 </div>
 
                 <% }); %>
@@ -172,7 +147,7 @@
 
         <div class="second_main">
             <h3 class="shead">Wine</h3>
-            <% datas6.forEach(data=> { %>
+            <% datas.forEach(data=> { %>
                 <div class="first">
                     <div class="second">
                         <p class="name">
@@ -184,19 +159,16 @@
                         <p class="price">US$<%= data.price %>.00 </p>
 
                     </div>
-                    <% if (data.img) { 
-                        var img = data.img
-                     }else{
-                        var img = "/images/Bevri Logo Small Transparent.png "
-                     } %>
-                    <div class="third">
-                        <img class="simg" src="<%= img %>">
-                    </div>
+                    <% if (data.img) { var img=data.img }else{ var img="/images/Bevri Logo Small Transparent.png " } %>
+                        <div class="third">
+                            <img class="simg" src="<%= img %>">
+                        </div>
                 </div>
 
                 <% }); %>
         </div>
-
     </div>
+
+
 
     <%- include("partials/footer") %>

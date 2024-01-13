@@ -97,10 +97,10 @@ app.post("/login", async function (req, res) {
         // res.render("secret");
         res.render("Home.ejs", { name: req.session.username });
       } else {
-        res.status(400).json({ error: "password doesn't match" });
+        res.render("login.ejs", { error: "password doesn't match" });
       }
     } else {
-      res.status(400).json({ error: "User doesn't exist" });
+      res.render("login.ejs", { error: "User doesn't exist" });
     }
   } catch (error) {
     console.log(error.message);
@@ -202,7 +202,7 @@ app.get("/pickup", (req, res) => {
   res.render("pickup.ejs")
 })
 
-app.get("/seemore", async (req, res) => {
+app.get("/seeMore", async (req, res) => {
   try {
     const response = await axios.get(`${API_URL}/SmallPlates/?key=123456789`);
     const response1 = await axios.get(`${API_URL}/SoupsandSalads/?key=123456789`);
@@ -212,7 +212,7 @@ app.get("/seemore", async (req, res) => {
     const response5 = await axios.get(`${API_URL}/Desserts/?key=123456789`);
     const response6 = await axios.get(`${API_URL}/Wine/?key=123456789`);
     // console.log(response);
-    res.render("seemore.ejs",
+    res.render("seeMore.ejs",
       {
         datas: response.data,
         datas1: response1.data,
@@ -223,11 +223,105 @@ app.get("/seemore", async (req, res) => {
         datas6: response6.data,
       });
   } catch (error) {
-    res.status(500).json({ error: error });
+    res.render("SomethingWentWrong.ejs")
   }
 })
 
+app.get("/SmallPlates", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/SmallPlates/?key=123456789`);
+    // console.log(response);
+    res.render("SmallPlates.ejs",
+      {
+        datas: response.data
+      });
+  } catch (error) {
+    res.render("SomethingWentWrong.ejs")
+  }
+})
 
+app.get("/SoupsandSalads", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/SoupsandSalads/?key=123456789`);
+    // console.log(response);
+    res.render("SoupsandSalads.ejs",
+      {
+        datas: response.data
+      });
+  } catch (error) {
+    res.render("SomethingWentWrong.ejs")
+  }
+})
+
+app.get("/Essentials", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/Essentials/?key=123456789`);
+    // console.log(response);
+    res.render("Essentials.ejs",
+      {
+        datas: response.data
+      });
+  } catch (error) {
+    res.render("SomethingWentWrong.ejs")
+  }
+})
+
+app.get("/MeatandFish", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/MeatandFish/?key=123456789`);
+    // console.log(response);
+    res.render("MeatandFish.ejs",
+      {
+        datas: response.data
+      });
+  } catch (error) {
+    res.render("SomethingWentWrong.ejs")
+    MeatandFish
+  }
+})
+
+app.get("/SoftDrinks", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/SoftDrinks/?key=123456789`);
+    // console.log(response);
+    res.render("SoftDrinks.ejs",
+      {
+        datas: response.data
+      });
+  } catch (error) {
+    res.render("SomethingWentWrong.ejs")
+  }
+})
+
+app.get("/Desserts", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/Desserts/?key=123456789`);
+    // console.log(response);
+    res.render("Desserts.ejs",
+      {
+        datas: response.data
+      });
+  } catch (error) {
+    res.render("SomethingWentWrong.ejs")
+  }
+})
+
+app.get("/Wine", async (req, res) => {
+  try {
+    const response = await axios.get(`${API_URL}/Wine/?key=123456789`);
+    // console.log(response);
+    res.render("Wine.ejs",
+      {
+        datas: response.data
+      });
+  } catch (error) {
+    res.render("SomethingWentWrong.ejs")
+  }
+})
+
+// app.get("/SomethingWentWrong", (req, res) => {
+//   res.render("SomethingWentWrong.ejs")
+// })
 
 
 //      ====-----==== Table Booking Section ====-----====
@@ -260,7 +354,7 @@ app.post("/TableBooking", async (req, res) => {
 
     }
   } catch (error) {
-    console.log(error.message);
+    res.render("SomethingWentWrong.ejs")
   }
 
 });
@@ -276,7 +370,7 @@ app.get("/orders", async (req, res) => {
     console.log(response);
     res.render("orders.ejs", { datas: response.data });
   } catch (error) {
-    res.status(500).json({ error: error });
+    res.render("SomethingWentWrong.ejs")
   }
 });
 
@@ -300,7 +394,7 @@ app.get("/Users", async (req, res) => {
     console.log(uresponse);
     res.render("Users.ejs", { datas: uresponse.data });
   } catch (error) {
-    res.status(500).json({ error: error });
+    res.render("SomethingWentWrong.ejs")
   }
 });
 
@@ -372,7 +466,7 @@ app.get("/edit/:id", async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ message: "Error fetching post" });
-  } 
+  }
 });
 
 app.post("/api/Pdata/:id", async (req, res) => {

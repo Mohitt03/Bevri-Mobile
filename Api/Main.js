@@ -7,6 +7,7 @@ const LoginData = require('../models/User')
 const ProductsData = require('../models/Products')
 const app = express()
 const masterKey = "123456789"
+var port = "5000"
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -440,7 +441,7 @@ mongoose.
     connect('mongodb+srv://admin:1234@api.w1sen0x.mongodb.net/?retryWrites=true&w=majority')
     .then(() => {
         console.log('connected to MongoDB')
-        app.listen(5000, () => {
+        app.listen(process.env.PORT || port, () => {
             console.log(`Node API app is running on port 5000`)
         });
     }).catch((error) => {

@@ -16,6 +16,7 @@ const Product = require("../models/Products");
 const { text } = require("body-parser");
 var app = express();
 app.use(express.static("public"))
+var port = "3000"
 
 
 // MongoDB Username Password 
@@ -500,6 +501,6 @@ app.get("/api/Pdata/delete/:id", async (req, res) => {
 //      ====-----==== Server Rendering Section ====-----====
 
 
-app.listen("3000", () => {
+app.listen(process.env.PORT || port, () => {
   console.log("Listening on port 3000");
 });

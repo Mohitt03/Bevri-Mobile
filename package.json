@@ -2,8 +2,8 @@
   "name": "bevri-mobile",
   "version": "1.0.0",
   "description": "http://localhost:3000/",
-  "index": "src/index.js",
-  "main": "Api/Main.js",
+  "main": "src/index.js",
+  "index": "Api/Main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "index": "nodemon src/index.js",

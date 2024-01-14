@@ -401,7 +401,7 @@ app.patch('/Pdata/:id', async (req, res) => {
         if (req.body.img) productsData.img = req.body.img;
         if (req.body.img2) productsData.img2 = req.body.img2;
 
-        res.status(200).json(productsData); 
+        res.status(200).json(productsData);
 
     } catch (error) {
         res.status(500).json({ message: "Server error" })

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="\styles\TableBooking.css">
+
 </head>
 
 <body>
@@ -22,92 +25,106 @@
 
 
     <section class="formSec">
-        <div class="formdiv">
+        <div class="formdiv container">
             <form class="form" action="/TableBooking" method="post">
                 <label class="flabel">Make a Reservation</label><br>
-                <div class="part1">
+                <div class="part1 row">
 
-                    <select class="finput finput1" name="restaurant" required>
-                        <option>Select a restaurant</option>
-                        <option value="Bevri Los Altos">Bevri-Los Altos</option>
-                        <option value="Bevri Palo Alto">Bevri-Palo Alto</option>
+                    <div class="col-sm">
+                        <select class="finput finput1" name="restaurant" required>
+                            <option>Select a restaurant</option>
+                            <option value="Bevri Los Altos">Bevri-Los Altos</option>
+                            <option value="Bevri Palo Alto">Bevri-Palo Alto</option>
+                        </select><br>
+                    </div>
+                    <div class="col-sm">
+                        <input class="finput finput2" type="date" id="my_hidden_input" name="date"><br>
+                    </div>
                     </select><br>
-                    <input class="finput finput2" type="date" id="my_hidden_input" name="date"><br>
+                    <div class="col-sm">
+                        <select class="finput finput3" name="time" required>
+                            <option>Timing</option>
+                            <option value="11:00am">11:00am</option>
+                            <option value="11:30am">11:30am</option>
+                            <option value="12:00pm">12:00pm</option>
+                            <option value="12:30pm">12:30pm</option>
+                            <option value="01:00pm">01:00pm</option>
+                            <option value="01:30pm">01:30pm</option>
+                            <option value="02:00pm">02:00pm</option>
+                            <option value="02:30pm">02:30pm</option>
+                            <option value="03:00pm">03:00pm</option>
+                            <option value="03:30pm">03:30pm</option>
+                            <option value="04:00pm">04:00pm</option>
+                            <option value="04:30pm">04:30pm</option>
+                            <option value="05:00pm">05:00pm</option>
+                            <option value="05:30pm">05:30pm</option>
+                            <option value="06:00pm">06:00pm</option>
+                            <option value="06:30pm">06:30pm</option>
+                            <option value="07:00pm">07:00pm</option>
+                            <option value="07:30pm">07:30pm</option>
+                            <option value="08:00pm">08:00pm</option>
+                            <option value="08:30pm">08:30pm</option>
+                            <option value="09:00pm">09:00pm</option>
+                            <option value="09:30pm">09:30pm</option>
+                            <option value="10:00pm">10:00pm</option>
+                            <option value="10:30pm">10:30pm</option>
+                            <option value="11:00pm">11:00pm</option>
+                            <option value="11:30pm">11:30pm</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="part2 row">
+                    <div class="col-sm">
+                        <select class="finput finput4" name="people" required>
+                            <option value="1">1 people</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5 people</option>
+                            <option value="6">6 people</option>
+                            <option value="7">7 people</option>
+                            <option value="8">8 people</option>
+                            <option value="9">9 people</option>
+                            <option value="10">10 people</option>
+                            <option value="11">11 people</option>
+                            <option value="12">12 people</option>
+                            <option value="13">13 people</option>
+                            <option value="14">14 people</option>
+                            <option value="15">15 people</option>
+                            <option value="16">16 people</option>
+                            <option value="17">17 people</option>
+                            <option value="18">18 people</option>
+                            <option value="19">19 people</option>
+                            <option value="20">20 people</option>
+                        </select><br>
+                    </div>
 
-                    </select><br>
-                </div>
-                <div class="part2">
-                    <select class="finput finput3" name="time" required>
-                        <option>Timing</option>
-                        <option value="11:00am">11:00am</option>
-                        <option value="11:30am">11:30am</option>
-                        <option value="12:00pm">12:00pm</option>
-                        <option value="12:30pm">12:30pm</option>
-                        <option value="01:00pm">01:00pm</option>
-                        <option value="01:30pm">01:30pm</option>
-                        <option value="02:00pm">02:00pm</option>
-                        <option value="02:30pm">02:30pm</option>
-                        <option value="03:00pm">03:00pm</option>
-                        <option value="03:30pm">03:30pm</option>
-                        <option value="04:00pm">04:00pm</option>
-                        <option value="04:30pm">04:30pm</option>
-                        <option value="05:00pm">05:00pm</option>
-                        <option value="05:30pm">05:30pm</option>
-                        <option value="06:00pm">06:00pm</option>
-                        <option value="06:30pm">06:30pm</option>
-                        <option value="07:00pm">07:00pm</option>
-                        <option value="07:30pm">07:30pm</option>
-                        <option value="08:00pm">08:00pm</option>
-                        <option value="08:30pm">08:30pm</option>
-                        <option value="09:00pm">09:00pm</option>
-                        <option value="09:30pm">09:30pm</option>
-                        <option value="10:00pm">10:00pm</option>
-                        <option value="10:30pm">10:30pm</option>
-                        <option value="11:00pm">11:00pm</option>
-                        <option value="11:30pm">11:30pm</option>
-                    </select>
-                    <select class="finput finput4" name="people" required>
-                        <option value="1">1 people</option>
-                        <option value="2">2 people</option>
-                        <option value="3">3 people</option>
-                        <option value="4">4 people</option>
-                        <option value="5">5 people</option>
-                        <option value="6">6 people</option>
-                        <option value="7">7 people</option>
-                        <option value="8">8 people</option>
-                        <option value="9">9 people</option>
-                        <option value="10">10 people</option>
-                        <option value="11">11 people</option>
-                        <option value="12">12 people</option>
-                        <option value="13">13 people</option>
-                        <option value="14">14 people</option>
-                        <option value="15">15 people</option>
-                        <option value="16">16 people</option>
-                        <option value="17">17 people</option>
-                        <option value="18">18 people</option>
-                        <option value="19">19 people</option>
-                        <option value="20">20 people</option>
-                    </select><br>
-                </div>
-                <div class="part2">
+                    <div class="col-sm">
+                        <select class="finput finput5" name="seat" required>
+                            <option>Seat Type</option>
+                            <option value="Standard">Standard ₹200</option>
+                            <option value="Premium">Premium ₹800</option>
+                        </select><br>
+                    </div>
+                    <div class="col-sm">
 
-                    <select class="finput finput5" name="seat" required>
-                        <option>Seat Type</option>
-                        <option value="Standard">Standard ₹200</option>
-                        <option value="Premium">Premium ₹800</option>
-                    </select><br>
-                    <select class="finput finput6" name="ocassion">
-                        <option>Ocassion</option>
-                        <option value="Birthday">Birthday</option>
-                        <option value="Anniversary">Anniversary</option>
-                        <option value="Date Night">Date Night</option>
-                        <option value="Business Meal">Business Meal</option>
-                        <option value="Celebration">Celebration</option>
-                    </select><br>
+                        <select class="finput finput6" name="ocassion">
+                            <option>Ocassion</option>
+                            <option value="Birthday">Birthday</option>
+                            <option value="Anniversary">Anniversary</option>
+                            <option value="Date Night">Date Night</option>
+                            <option value="Business Meal">Business Meal</option>
+                            <option value="Celebration">Celebration</option>
+                        </select><br>
+                    </div>
                 </div>
-                <div class="part3">
-                    <input class="finput" type="text" placeholder="  Username" name="username"><br>
-                    <input class="finput" type="tel" placeholder="  Phone no " name="number"><br>
+                <div class="part3 row">
+                    <div class="col-sm">
+                        <input class="finput" type="text" placeholder="  Username" name="username"><br>
+                    </div>
+                    <div class="col-sm">
+                        <input class="finput" type="tel" placeholder="  Phone no " name="number"><br>
+                    </div>
 
                 </div>
                 <button class="fbtn" type="submit">Submit</button>
@@ -115,7 +132,15 @@
         </div>
 
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <script src="/JS/Hide.js"></script>
+
 </body>
 
 </html>

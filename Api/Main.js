@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 const UserData = require('../models/Reservations')
 const LoginData = require('../models/User')
 const ProductsData = require('../models/Products')
+const ParkingData = require('../models/Parking')
+
 const app = express()
 const masterKey = "123456789"
 var port = "5000"
@@ -434,6 +436,100 @@ app.delete('/Pdata/:id', async (req, res) => {
     }
 
 })
+
+// Parking Area Data
+
+
+
+
+
+app.get('/Parking', async (req, res) => {
+    // const userKey = (req.query.key)
+    // if (userKey === masterKey) {
+        try {
+            const parkingData = await ParkingData.find({});
+            res.status(200).json(parkingData);
+        } catch (error) {
+            res.status(500).json({ message: error.message })
+        }
+    // }
+    // else {
+    //     res
+    //         .status(404)
+    //         .json({ error: "You are not authorized" })
+    // }
+
+})
+
+app.get('/Parking/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const parkingData = await ParkingData.findById(id);
+        res.status(200).json(parkingData);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+
+app.post('/Parking', async (req, res) => {
+    try {
+        const parkingData = await ParkingData.create(req.body)
+        res.status(200).json(parkingData);
+
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).json({ message: error.message })
+    }
+})
+
+// update a product
+app.put('/Parking/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const parkingData = await ParkingData.findByIdAndUpdate(id, req.body);
+        // we cannot find any product in database
+        if (!parkingData) {
+            return res.status(404).json({ message: `cannot find any product with ID ${id}` })
+        }
+        const updatedparkingData = await ParkingData.findById(id);
+        res.status(200).json(updatedparkingData);
+
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+
+// delete a product
+
+app.delete('/Parking/:id', async (req, res) => {
+    const userKey = (req.query.key)
+    if (userKey === masterKey) {
+
+        try {
+            const userKey = (req.query.key)
+            const { id } = req.params;
+            const parkingData = await ParkingData.findByIdAndDelete(id);
+            if (!parkingData) {
+                return res.status(404).json({ message: `cannot find any Parking Data with ID ${id}` })
+            }
+            res.status(200).json(parkingData);
+
+        }
+        catch (error) {
+            res.status(500).json({ message: error.message })
+        }
+    }
+    else {
+        res
+            .status(404)
+            .json({ error: "You are not authorized" })
+    }
+
+})
+
+
 
 
 mongoose.set("strictQuery", false)

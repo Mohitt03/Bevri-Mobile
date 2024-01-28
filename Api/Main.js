@@ -441,6 +441,18 @@ app.delete('/Pdata/:id', async (req, res) => {
 
 
 
+app.get('/parking/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const parking = await ParkingData.findById(id);
+        res.status(200).json(parking);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+
+
 
 
 app.get('/Parking', async (req, res) => {

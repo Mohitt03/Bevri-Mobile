@@ -456,7 +456,7 @@ app.post("/Pdata", async (req, res) => {
 
 // Partially update a post
 
-app.get("/edit/:id", async (req, res) => {
+app.get("/edit/:id", async (req, res) => {  
   try {
     const response = await axios.get(`${API_URL}/Pdata/${req.params.id}`);
     console.log(response.data);

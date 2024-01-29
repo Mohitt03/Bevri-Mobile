@@ -88,7 +88,7 @@ app.post("/login", async function (req, res) {
     // check if the user exists
     const user = await User.findOne({ username: req.body.username });
     const username = req.body.username; // Assuming you retrieve the username from the login form
-    req.session.username = username; 1
+    req.session.username = username; 
 
     if (user) {
       //check if password matches

@@ -88,7 +88,7 @@ app.post("/login", async function (req, res) {
     // check if the user exists
     const user = await User.findOne({ username: req.body.username });
     const username = req.body.username; // Assuming you retrieve the username from the login form
-    req.session.username = username; 1
+    req.session.username = username; 
 
     if (user) {
       //check if password matches
@@ -456,7 +456,7 @@ app.post("/Pdata", async (req, res) => {
 
 // Partially update a post
 
-app.get("/edit/:id", async (req, res) => {
+app.get("/edit/:id", async (req, res) => {  
   try {
     const response = await axios.get(`${API_URL}/Pdata/${req.params.id}`);
     console.log(response.data);

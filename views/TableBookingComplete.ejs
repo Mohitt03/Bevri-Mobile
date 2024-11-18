@@ -227,7 +227,8 @@
             bottom: 60px; */
             cursor: pointer;
         }
-        .alertp{
+
+        .alertp {
             color: grey;
             font-size: smaller;
         }
@@ -245,6 +246,7 @@
                 <button class="btn-invoice" onclick="myFunction()">Download Invoice</button>
                 <p class="alertp">Alert: Download will take a second</p>
             </div>
+            <a href="/">Go to home page</a>
         </div>
 
     </div>
@@ -259,9 +261,9 @@
             <script> function myFunction() {
 
                     if ("<%=reservation.seat%>" === "Premium") {
-                        var price = 800
+                        var price = 100
                     } else {
-                        var price = 200
+                        var price = 50
                     }
 
                     var data = {
@@ -281,10 +283,9 @@
                         },
                         // Your own data
                         "sender": {
-                            "company": "Bevri",
-                            "address": "325 Main St, Los Altos, CA 94022, United States",
-                            "city": "Los Altos",
-                            "country": "Georgia"
+                            "company": "DineEasy",
+                            "city": "Surat",
+                            "country": "India"
                             //"custom1": "custom value 1",
                             //"custom2": "custom value 2",
                             //"custom3": "custom value 3"

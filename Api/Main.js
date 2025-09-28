@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const UserData = require('../models/Reservations')
 const LoginData = require('../models/User')
 const ProductsData = require('../models/Products')
-const ParkingData = require('../models/Parking')
+// const ParkingData = require('../models/Parking')
 
 const app = express()
 const masterKey = "123456789"
@@ -167,7 +167,7 @@ app.post('/Udata', async (req, res) => {
 
     } catch (error) {
         console.log(error.message);
-        res.status(500).json({ message: error.message })
+        res.status(500).json({ message: error })
     }
 })
 
@@ -458,12 +458,12 @@ app.get('/parking/:id', async (req, res) => {
 app.get('/Parking', async (req, res) => {
     // const userKey = (req.query.key)
     // if (userKey === masterKey) {
-        try {
-            const parkingData = await ParkingData.find({});
-            res.status(200).json(parkingData);
-        } catch (error) {
-            res.status(500).json({ message: error.message })
-        }
+    try {
+        const parkingData = await ParkingData.fiBnd({});
+        res.status(200).json(parkingData);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
     // }
     // else {
     //     res
@@ -546,11 +546,11 @@ app.delete('/Parking/:id', async (req, res) => {
 
 mongoose.set("strictQuery", false)
 mongoose.
-    connect('mongodb+srv://admin:1234@api.w1sen0x.mongodb.net/?retryWrites=true&w=majority')
+    connect('mongodb+srv://admin:1234@api.w1sen0x.mongodb.net/Bevri?retryWrites=true&w=majority')
     .then(() => {
         console.log('connected to MongoDB')
-        app.listen(process.env.PORT || port, () => {
-            console.log(`Node API app is running on port 5000`)
+        app.listen(7000, () => {
+            console.log(`Node API app is running on port 7000`)
         });
     }).catch((error) => {
         console.log(error)
